@@ -3,20 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('resortSearchButton').addEventListener('click', function() {
         var resortName = document.getElementById('resortSearchBox').value;
         if (resortName) {
-            // Replace spaces with '%20' to ensure the URL is encoded correctly
             var formattedResortName = resortName.replace(/ /g, '%20');
-            // Fetch resort data using the API (assuming you have an endpoint set up)
             fetch(`/api/search?resort=${formattedResortName}`)
                 .then(response => response.json())
                 .then(data => {
                     // Handle the fetched resort data
-                    displayResortData(data);
+                    individualResortData(data);
                     // Open the modal to show the data
                     openModal();
                 })
                 .catch(error => console.error('Error fetching data:', error));
         }
     });
+
 
     // Event listener for the "Show All Resorts" button
     document.getElementById('thebutton').addEventListener('click', function() {
@@ -38,6 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayResortData(data) {
         var modalContent = document.getElementById('modalContent');
         modalContent.innerHTML = ''; // Clear previous content
+
+        // Adjust column headers
+        document.querySelector("#skiResortTable th:nth-child(1)").textContent = "RANK";
+        document.querySelector("#skiResortTable th:nth-child(2)").textContent = "RESORT";
+        document.querySelector("#skiResortTable th:nth-child(3)").textContent = "SCORE";
+
         data.forEach((resort, index) => {
             var row = document.createElement('tr');
             row.innerHTML = `
@@ -48,6 +53,33 @@ document.addEventListener('DOMContentLoaded', function() {
             modalContent.appendChild(row);
         });
     }
+
+// Function to display individual resort data inside the modal
+function individualResortData(data) {
+    var modalContent = document.getElementById('modalContent');
+    modalContent.innerHTML = ''; // Clear previous content
+
+    // Adjust column headers
+    document.querySelector("#skiResortTable th:nth-child(1)").textContent = "Name";
+    document.querySelector("#skiResortTable th:nth-child(2)").textContent = "Region";
+    document.querySelector("#skiResortTable th:nth-child(2)").textContent = "Bottom Snow Depth";
+    // And so forth with your remaining headers...
+
+    // Create row for individual resort
+    var row = document.createElement('tr');
+    row.innerHTML = `
+        <td>${data.basicInfo.name}</td>
+        <td>${data.basicInfo.region}</td>
+        <td>${data.botSnowDepth}</td>
+        <td>${data.topSnowDepth}</td>
+        <td>${data.freshSnowfall}</td>
+        <td>${data.lastSnowfallDate}</td>
+    `;
+    modalContent.appendChild(row);
+}
+
+
+
 
     // Function to open the modal
     function openModal() {
