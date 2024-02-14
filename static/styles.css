@@ -1,0 +1,221 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("background-image.jpg");
+    background-size: cover;
+    color: #222;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 45px;
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#title h1,
+.main-content h2 {
+    color: #445565;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.main-content {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-grow: 1;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.search-bar input {
+    font-size: 1.2em;
+    padding: 10px;
+    flex-grow: 1;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.search-bar button,
+.show-rankings-btn {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background: #445565;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover,
+.show-rankings-btn:hover {
+    background: #66788a;
+}
+
+.resort-list {
+    padding-left: 20px;
+}
+
+.resort {
+    font-size: 1em;
+    list-style-position: outside;
+    padding: 10px 0;
+}
+
+#all-resorts {
+    display: block;
+}
+
+#resort-modal,
+#modal {
+    position: fixed;
+    z-index: 2;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+#modal > div {
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: none;
+    max-width: 600px;
+    width: 90%;
+    margin: 0;
+}
+
+#modal button {
+    float: right;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#modal table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#modal th {
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+#ski-resorts-table,
+#skiResortTable {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 1em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#ski-resorts-table thead th,
+#skiResortTable thead th {
+    background-color: #445565;
+    color: white;
+    font-weight: bold;
+    padding: 12px 15px;
+}
+
+#ski-resorts-table tbody td,
+#skiResortTable tbody td {
+    padding: 10px 15px;
+    color: #222;
+    text-align: center;
+}
+
+#ski-resorts-table tr:nth-child(odd),
+#skiResortTable tr:nth-child(odd),
+#ski-resorts-table tr:nth-child(even),
+#skiResortTable tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+#ski-resorts-table tr:hover,
+#skiResortTable tr:hover {
+    background-color: #d1e0e0;
+}
+
+#ski-resorts-table .score,
+#skiResortTable .score {
+    text-align: right;
+}
+
+.close-btn {
+    background: #c44;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

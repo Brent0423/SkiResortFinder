@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>USA Ski Resort Rankings</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="title">
+        <h1>USA Ski Resort Rankings</h1>
+      </div>
+    </header>
+    <div class="main-content">
+      <section id="search-resort">
+        <h2>Search for a Ski Resort</h2>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="resortSearchBox"
+            placeholder="Enter ski resort"
+          />
+          <button id="resortSearchButton">Search</button>
+        </div>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <table id="skiResortTable">
+              <thead>
+                <tr>
+                  <th>RANK</th>
+                  <th>RESORT</th>
+                  <th>SCORE</th>
+                </tr>
+              </thead>
+              <tbody id="modalContent">
+                <!-- Resort data will be dynamically added here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section id="all-resorts">
+        <h2>All Ski Resort Rankings</h2>
+        <button class="show-rankings-btn" id="thebutton">
+          Show All Ski Resorts
+        </button>
+      </section>
+      <section id="top-resorts">
+        <h2>Today's Top 5 Ski Resorts</h2>
+        <ol class="resort-list">
+          <li class="resort"><strong>Resort One:</strong></li>
+          <li class="resort"><strong>Resort Two:</strong></li>
+          <li class="resort"><strong>Resort Three:</strong></li>
+          <li class="resort"><strong>Resort Four:</strong></li>
+          <li class="resort"><strong>Resort Five:</strong></li>
+        </ol>
+      </section>
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
