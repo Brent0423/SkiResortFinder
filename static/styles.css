@@ -109,7 +109,7 @@ h2 {
     padding: 0px;
     border-radius: 10px;
     box-shadow: none;
-    max-width: 600px;
+    max-width: 300px;
     width: 90%;
     margin: 0;
 }
@@ -126,9 +126,25 @@ h2 {
     border-collapse: collapse;
 }
 
-#modal th {
+#modal th,
+#modal td {
     padding: 10px;
-    background-color: #f2f2f2;
+    text-align: center;
+}
+
+#modal th:nth-child(1),
+#modal td:nth-child(1) {
+    width: 10%; /* Adjust as needed */
+}
+
+#modal th:nth-child(2),
+#modal td:nth-child(2) {
+    width: 10%; /* Adjust as needed */
+}
+
+#modal th:nth-child(3),
+#modal td:nth-child(3) {
+    width: 10%; /* Adjust as needed */
 }
 
 #ski-resorts-table,
@@ -203,7 +219,7 @@ h2 {
 .modal-content {
     margin: auto;
     padding: 20px;
-    width: 80%;
+    width: 40%;
 }
 
 .close {
