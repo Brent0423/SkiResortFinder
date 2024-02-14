@@ -1,6 +1,7 @@
 import os
 import time
 import requests
+import logging
 from dotenv import load_dotenv
 from resorts import resorts
 
@@ -10,12 +11,20 @@ load_dotenv(dotenv_path='rapid.env')
 # Access the API_KEY environment variable
 api_key = os.getenv("API_KEY")
 
+# Initialize logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 # Initialize a session for connection reuse
 session = requests.Session()
 session.headers.update({
     "X-RapidAPI-Key": api_key,
     "X-RapidAPI-Host": "ski-resort-forecast.p.rapidapi.com"
 })
+
+# Constants
+BASE_URL = "https://ski-resort-forecast.p.rapidapi.com/{}/snowConditions"
+DELAY_BETWEEN_REQUESTS = 2
 
 def parse_depth(measurement):
     # Parses the snow depth measurement and converts it to inches if necessary.
@@ -28,8 +37,25 @@ def parse_depth(measurement):
     elif measurement.endswith('in'):
         return int(measurement.rstrip('in'))
     else:
-        print(f"Warning: Measurement format for '{measurement}' not recognized.")
+        logger.warning(f"Measurement format for '{measurement}' not recognized.")
         return 0
+
+def fetch_resort_data_sequentially(resorts):
+    # Fetches resort data using sequential requests with delay.
+    resort_data = {}
+    for resort in resorts:
+        try:
+            formatted_resort_name = resort.replace(" ", "%20")
+            url = BASE_URL.format(formatted_resort_name)
+            response = session.get(url, timeout=5)  # Use session for requests
+            response.raise_for_status()
+            resort_data[resort] = response.json()
+            logger.info(f"Data fetched for {resort}.")
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Request error for {resort}: {e}")
+            resort_data[resort] = None  # Handle errors by setting data to None
+        time.sleep(DELAY_BETWEEN_REQUESTS)  # Wait for specified delay to avoid hitting rate limits
+    return resort_data
 
 def process_resort_data(resort_data):
     # Processes the raw resort data and extracts relevant snow condition information.
@@ -42,24 +68,6 @@ def process_resort_data(resort_data):
             'freshSnowfall': parse_depth(snow_data.get('freshSnowfall', '0in')),
         }
     return processed_data
-
-def fetch_resort_data_sequentially(resorts, delay=2):
-    # Fetches resort data using sequential requests with delay.
-    base_url = "https://ski-resort-forecast.p.rapidapi.com/{}/snowConditions"
-    resort_data = {}
-    for resort in resorts:
-        try:
-            formatted_resort_name = resort.replace(" ", "%20")
-            url = base_url.format(formatted_resort_name)
-            response = session.get(url, timeout=5)  # Use session for requests
-            response.raise_for_status()
-            resort_data[resort] = response.json()
-            print(f"Data fetched for {resort}.")
-        except requests.exceptions.RequestException as e:
-            print(f"Request error for {resort}: {e}")
-            resort_data[resort] = None  # Handle errors by setting data to None
-        time.sleep(delay)  # Wait for specified delay to avoid hitting rate limits
-    return resort_data
 
 def sort_resorts(processed_data):
     # Ranks resorts based on normalized snow condition scores.
@@ -79,10 +87,10 @@ def sort_resorts(processed_data):
     return sorted(total_scores.items(), key=lambda x: x[1], reverse=True)
 
 if __name__ == "__main__":
-    print("Starting to fetch resort data...")
+    logger.info("Starting to fetch resort data...")
     raw_data = fetch_resort_data_sequentially(resorts)
     processed_data = process_resort_data(raw_data)
     top_resorts = sort_resorts(processed_data)
-    print("\nTop Resorts based on snow conditions:")
+    logger.info("\nTop Resorts based on snow conditions:")
     for resort, score in top_resorts:
-        print(f"{resort}: Score {score}")
+        logger.info(f"{resort}: Score {score}")

@@ -40,18 +40,21 @@
           />
           <button id="resortSearchButton">Search</button>
         </div>
-        <div id="myModal" class="modal">
+        <div id="searchModal" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
-            <table id="skiResortTable">
+            <table id="searchTable">
               <thead>
                 <tr>
-                  <th>RANK</th>
-                  <th>RESORT</th>
-                  <th>SCORE</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
                 </tr>
               </thead>
-              <tbody id="modalContent">
+              <tbody id="searchModalContent">
                 <!-- Resort data will be dynamically added here -->
               </tbody>
             </table>
@@ -63,6 +66,23 @@
         <button class="show-rankings-btn" id="thebutton">
           Show All Ski Resorts
         </button>
+        <div id="showAllModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <table id="showAllTable">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="showAllModalContent">
+                <!-- Resort data will be dynamically added here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
       <section id="top-resorts">
         <h2>Today's Top 5 Ski Resorts</h2>

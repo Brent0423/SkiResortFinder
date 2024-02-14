@@ -10,12 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Handle the fetched resort data
                     individualResortData(data);
                     // Open the modal to show the data
-                    openModal();
+                    openModal('searchModal');
                 })
                 .catch(error => console.error('Error fetching data:', error));
         }
     });
-
 
     // Event listener for the "Show All Resorts" button
     document.getElementById('thebutton').addEventListener('click', function() {
@@ -28,20 +27,20 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.json())
             .then(data => {
                 displayResortData(data); // Display fetched data
-                openModal(); // Open the modal to show the data
+                openModal('showAllModal'); // Open the modal to show the data
             })
             .catch(error => console.error('Error fetching data:', error));
     }
 
     // Function to display fetched resort data inside the modal
     function displayResortData(data) {
-        var modalContent = document.getElementById('modalContent');
+        var modalContent = document.getElementById('showAllModalContent');
         modalContent.innerHTML = ''; // Clear previous content
 
         // Adjust column headers
-        document.querySelector("#skiResortTable th:nth-child(1)").textContent = "RANK";
-        document.querySelector("#skiResortTable th:nth-child(2)").textContent = "RESORT";
-        document.querySelector("#skiResortTable th:nth-child(3)").textContent = "SCORE";
+        document.querySelector("#showAllTable th:nth-child(1)").textContent = "RANK";
+        document.querySelector("#showAllTable th:nth-child(2)").textContent = "RESORT";
+        document.querySelector("#showAllTable th:nth-child(3)").textContent = "SCORE";
 
         data.forEach((resort, index) => {
             var row = document.createElement('tr');
@@ -54,55 +53,58 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-// Function to display individual resort data inside the modal
-function individualResortData(data) {
-    var modalContent = document.getElementById('modalContent');
-    modalContent.innerHTML = ''; // Clear previous content
+    // Function to display individual resort data inside the modal
+    function individualResortData(data) {
+        var modalContent = document.getElementById('searchModalContent');
+        modalContent.innerHTML = ''; // Clear previous content
 
-    // Adjust column headers
-    document.querySelector("#skiResortTable th:nth-child(1)").textContent = "Name";
-    document.querySelector("#skiResortTable th:nth-child(2)").textContent = "Region";
-    document.querySelector("#skiResortTable th:nth-child(2)").textContent = "Bottom Snow Depth";
-    // And so forth with your remaining headers...
+        // Adjust column headers
+        document.querySelector("#searchTable th:nth-child(1)").textContent = "Name";
+        document.querySelector("#searchTable th:nth-child(2)").textContent = "Region";
+        document.querySelector("#searchTable th:nth-child(3)").textContent = "Bottom Snow Depth";
+        document.querySelector("#searchTable th:nth-child(4)").textContent = "Top Snow Depth";
+        document.querySelector("#searchTable th:nth-child(5)").textContent = "Recent Snowfall Amount";
+        document.querySelector("#searchTable th:nth-child(6)").textContent = "Last Snowfall Date";
 
-    // Create row for individual resort
-    var row = document.createElement('tr');
-    row.innerHTML = `
-        <td>${data.basicInfo.name}</td>
-        <td>${data.basicInfo.region}</td>
-        <td>${data.botSnowDepth}</td>
-        <td>${data.topSnowDepth}</td>
-        <td>${data.freshSnowfall}</td>
-        <td>${data.lastSnowfallDate}</td>
-    `;
-    modalContent.appendChild(row);
-}
-
-
-
+        // Create row for individual resort
+        var row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${data.basicInfo.name}</td>
+            <td>${data.basicInfo.region}</td>
+            <td>${data.botSnowDepth}</td>
+            <td>${data.topSnowDepth}</td>
+            <td>${data.freshSnowfall}</td>
+            <td>${data.lastSnowfallDate}</td>
+        `;
+        modalContent.appendChild(row);
+    }
 
     // Function to open the modal
-    function openModal() {
-        var modal = document.getElementById('myModal');
+    function openModal(modalId) {
+        var modal = document.getElementById(modalId);
         modal.style.display = "block";
     }
 
     // Event listener for the close button of the modal
-    document.querySelector('#myModal .close').addEventListener('click', function() {
-        closeModal();
+    document.querySelectorAll('.close').forEach(function(closeButton) {
+        closeButton.addEventListener('click', function() {
+            closeModal(this.parentElement.parentElement.id);
+        });
     });
 
     // Function to close the modal
-    function closeModal() {
-        var modal = document.getElementById('myModal');
+    function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
         modal.style.display = "none";
     }
 
     // Optional: Close the modal when clicking outside of it
     window.addEventListener('click', function(event) {
-        var modal = document.getElementById('myModal');
-        if (event.target == modal) {
-            closeModal();
-        }
+        ['searchModal', 'showAllModal'].forEach(function(modalId) {
+            var modal = document.getElementById(modalId);
+            if (event.target == modal) {
+                closeModal(modalId);
+            }
+        });
     });
 });
