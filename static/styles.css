@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     background-image: url("background-image.jpg");
@@ -86,46 +87,6 @@ h2 {
     padding: 10px 0;
 }
 
-#all-resorts {
-    display: block;
-}
-
-#resort-modal,
-#modal {
-    position: fixed;
-    z-index: 2;
-    display: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
-}
-
-#modal > div {
-    background-color: #fff; /* Add a background color */
-    padding: 20px; /* Add some padding */
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a box shadow */
-    max-width: 300px;
-    width: 90%;
-    margin: 0;
-}
-
-#modal button {
-    float: right;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    background-color: #445565; /* Change the button color */
-    color: #fff; /* Change the text color */
-    border: none;
-    border-radius: 5px; /* Add some border radius */
-}
-
 .modal {
     display: none;
     position: fixed;
@@ -137,15 +98,13 @@ h2 {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
-    transition: all 0.3s ease-in-out; /* Add a transition effect */
+    transition: all 0.3s ease-in-out;
 }
 
 .modal-content {
-    background-color: #fff; /* Add a background color */
     margin: auto;
-    padding: 20px;
-    width: 40%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+    padding: 0;
+    width: 40%; /* Adjust as needed */
 }
 
 .close {
@@ -160,4 +119,60 @@ h2 {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Custom table styles */
+#searchTable,
+#showAllTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Ensures the border radius applies to child elements */
+}
+
+#searchTable thead,
+#showAllTable thead {
+    background: #008000;
+    color: white;
+}
+
+#searchTable th,
+#showAllTable th {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 2px solid white; /* Add contrast to headers */
+    background-color: #2ECC71;
+    text-align: center;
+}
+
+#searchTable td,
+#showAllTable td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Separates each row */
+    color: #333;
+}
+
+#searchTable tr:nth-child(odd),
+#showAllTable tr:nth-child(odd) {
+    background-color: #f3f3f3; /* Light grey for odd rows */
+}
+
+#searchTable tr:nth-child(even),
+#showAllTable tr:nth-child(even) {
+    background-color: #e1e1e1; /* Slightly darker grey for even rows */
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+    }
+
+    #searchTable,
+    #showAllTable {
+        width: 100%;
+    }
 }
