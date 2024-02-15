@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 displayResortData(data); // Display fetched data in modal
 
                 if (updateTopResortsImmediately) {
-                    updateTopResortsList(data.slice(0, 5)); // Immediately update the top resorts list
+                    updateTopResortsList(data); // Immediately update the top resorts list with all resorts
                 } else {
                     openModal('showAllModal'); // Open the modal to show all resorts
                 }

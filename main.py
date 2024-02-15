@@ -54,6 +54,7 @@ def fetch_resort_data_sequentially(resorts):
         except requests.exceptions.RequestException as e:
             logger.error(f"Request error for {resort}: {e}")
             resort_data[resort] = None  # Handle errors by setting data to None
+            logger.warning(f"Data for {resort} is set to None due to errors.")
         time.sleep(DELAY_BETWEEN_REQUESTS)  # Wait for specified delay to avoid hitting rate limits
     return resort_data
 
