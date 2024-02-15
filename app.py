@@ -2,12 +2,14 @@ from flask import Flask, render_template, jsonify, request
 from main import fetch_resort_data_sequentially, process_resort_data, sort_resorts
 from resorts import resorts
 import requests
+import json
+import os
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    test_resorts = resorts[:3]
+    test_resorts = []  # Remove the resorts[:3] to not fetch any resorts
     raw_data = fetch_resort_data_sequentially(test_resorts)
     if raw_data is None:
         return "Error: Unable to fetch resort data", 500
@@ -19,19 +21,27 @@ def home():
         return "Error: Unable to sort resorts", 500
     return render_template('index.html', data=rankings, enumerate=enumerate)
 
+resort_data = None
+
 @app.route('/api/resorts')
 def resorts_api():
-    raw_data = fetch_resort_data_sequentially(resorts[:5])
-    if raw_data is None:
-        return jsonify([]), 500
-    processed_data = process_resort_data(raw_data)
-    if processed_data is None:
-        return jsonify([]), 500
-    sorted_resorts = sort_resorts(processed_data)
-    if sorted_resorts is None:
-        return jsonify([]), 500
-    resorts_list = [{'name': name, 'score': score} for name, score in sorted_resorts[:5]]
-    return jsonify(resorts_list)
+    if os.path.exists('resort_data.json'):
+        with open('resort_data.json', 'r') as f:
+            resort_data = json.load(f)
+    else:
+        raw_data = fetch_resort_data_sequentially(resorts[:5])
+        if raw_data is None:
+            return jsonify([]), 500
+        processed_data = process_resort_data(raw_data)
+        if processed_data is None:
+            return jsonify([]), 500
+        sorted_resorts = sort_resorts(processed_data)
+        if sorted_resorts is None:
+            return jsonify([]), 500
+        resort_data = [{'name': name, 'score': score} for name, score in sorted_resorts[:5]]
+        with open('resort_data.json', 'w') as f:
+            json.dump(resort_data, f)
+    return jsonify(resort_data)
 
 @app.route('/api/search', methods=['GET'])
 def search_resort():
@@ -51,4 +61,4 @@ def search_resort():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
