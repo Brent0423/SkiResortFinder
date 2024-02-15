@@ -176,3 +176,24 @@ h2 {
         width: 100%;
     }
 }
+
+.resort-list .resort {
+    /* 1. Use padding and margins */
+    padding: 10px;
+    margin: 5px 0;
+
+    /* 3. Change the font */
+    font-family: Arial, sans-serif;
+    color: #333;
+
+    /* 4. Use borders and shadows */
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    text-align: center;
+}
+
+/* 5. Add hover effects */
+.resort-list .resort:hover {
+    background-color: #87CEEB;
+}

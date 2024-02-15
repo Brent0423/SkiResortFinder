@@ -44,9 +44,7 @@ def search_resort(resort_name):
 
 # Example usage:
 if __name__ == "__main__":
-    # Replace "YourResortName" with the actual resort name you want to search for
-    # Make sure to handle the returned data appropriately in your application
-    search_value = "YourResortName"  # Replace with your logic to obtain the resort name
+    search_value = "YourResortName"
     resort_data = search_resort(search_value)
     if resort_data:
         print(resort_data)
