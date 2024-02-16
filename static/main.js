@@ -1,24 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Immediately fetch top resorts data on page load
-    fetchResortData('/api/resorts', true); // Assuming '/api/resorts' returns all resorts
+    // Fetch top resorts data immediately on page load
+    fetchResortData('/api/resorts', true); // Endpoint assumed to return all resorts
 
     // Event listener for the search button
     document.getElementById('resortSearchButton').addEventListener('click', function() {
         var resortName = document.getElementById('resortSearchBox').value;
         if (resortName) {
+            // Format resort name for URL
             var formattedResortName = resortName.replace(/ /g, '%20');
+            // Fetch resort data based on search input
             fetch(`/api/search?resort=${formattedResortName}`)
                 .then(response => response.json())
                 .then(data => {
-                    // Handle the fetched resort data
+                    // Display individual resort data
                     individualResortData(data);
-                    // Open the modal to show the data
+                    // Open modal to show the data
                     openModal('searchModal');
                 })
                 .catch(error => console.error('Error fetching data:', error));
         }
     });
 
+    // Event listener for pressing Enter in the search input field
     document.getElementById('resortSearchBox').addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
             // Trigger click event on the search button
@@ -28,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listener for the "Show All Resorts" button
     document.getElementById('thebutton').addEventListener('click', function() {
-        fetchResortData('/api/resorts'); // Fetch and display all resorts
+        // Fetch and display all resorts data
+        fetchResortData('/api/resorts');
     });
 
     // Function to fetch and display resort data
@@ -36,12 +40,15 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                displayResortData(data); // Display fetched data in modal
+                // Display fetched data in modal
+                displayResortData(data);
 
                 if (updateTopResortsImmediately) {
-                    updateTopResortsList(data); // Immediately update the top resorts list with all resorts
+                    // Immediately update the top resorts list with all resorts
+                    updateTopResortsList(data);
                 } else {
-                    openModal('showAllModal'); // Open the modal to show all resorts
+                    // Open modal to show all resorts
+                    openModal('showAllModal');
                 }
             })
             .catch(error => console.error('Error fetching data:', error));
@@ -57,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector("#showAllTable th:nth-child(2)").textContent = "RESORT";
         document.querySelector("#showAllTable th:nth-child(3)").textContent = "SCORE";
 
+        // Populate table rows with resort data
         data.forEach((resort, index) => {
             var row = document.createElement('tr');
             row.innerHTML = `
@@ -68,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Function to update top resorts list
     function updateTopResortsList(resorts) {
         var resortList = document.querySelectorAll('.resort-list .resort');
         // Clear existing list content before updating
@@ -93,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector("#searchTable th:nth-child(5)").textContent = "Recent Snowfall Amount";
         document.querySelector("#searchTable th:nth-child(6)").textContent = "Last Snowfall Date";
 
+        // Populate table row with individual resort data
         var row = document.createElement('tr');
         row.innerHTML = `
             <td>${data.basicInfo.name}</td>

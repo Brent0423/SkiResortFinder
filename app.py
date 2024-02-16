@@ -140,6 +140,6 @@ def save_resort_data(resort_data):
         # Write the resort data as JSON to the file
         json.dump(resort_data, f)
 
-# Run the Flask app if this file is executed directly
+# Run the Flask app if this file is executed directly.
 if __name__ == '__main__':
     app.run(debug=False)

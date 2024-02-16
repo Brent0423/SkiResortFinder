@@ -1,18 +1,22 @@
 /* Global Styles */
+/* Applies to the entire page */
 body {
+    /* Font and background settings */
     font-family: Arial, sans-serif;
     background-image: url("background-image.jpg");
     background-size: cover;
     color: #222;
-    padding: 20px;
+    /* Flexbox setup for centering content vertically */
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
 }
 
+/* Styles for the page header */
 header {
     display: flex;
     justify-content: center;
@@ -20,15 +24,18 @@ header {
     text-align: center;
 }
 
+/* Title heading style */
 h1 {
     font-size: 45px;
     font-family: 'Playfair Display', serif;
 }
 
+/* Secondary heading style */
 h2 {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Specific styling for title and main content headings */
 #title h1,
 .main-content h2 {
     color: #445565;
@@ -36,6 +43,7 @@ h2 {
     text-align: center;
 }
 
+/* Main content container */
 .main-content {
     max-width: 1200px;
     display: flex;
@@ -44,6 +52,7 @@ h2 {
     flex-grow: 1;
 }
 
+/* Styling for the search bar */
 .search-bar {
     display: flex;
     justify-content: center;
@@ -51,6 +60,7 @@ h2 {
     align-items: center;
 }
 
+/* Search input field */
 .search-bar input {
     font-size: 1.2em;
     padding: 10px;
@@ -60,6 +70,7 @@ h2 {
     margin-right: 10px;
 }
 
+/* Search button and show rankings button styles */
 .search-bar button,
 .show-rankings-btn {
     font-size: 1.2em;
@@ -72,21 +83,25 @@ h2 {
     transition: background 0.3s ease;
 }
 
+/* Hover effect for search button and show rankings button */
 .search-bar button:hover,
 .show-rankings-btn:hover {
     background: #66788a;
 }
 
+/* Styling for resort list */
 .resort-list {
     padding-left: 20px;
 }
 
+/* Individual resort item style */
 .resort {
     font-size: 1em;
     list-style-position: outside;
     padding: 10px 0;
 }
 
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -101,12 +116,14 @@ h2 {
     transition: all 0.3s ease-in-out;
 }
 
+/* Modal content styles */
 .modal-content {
     margin: auto;
     padding: 0;
     width: 40%; /* Adjust as needed */
 }
 
+/* Close button styles */
 .close {
     color: #aaaaaa;
     float: right;
@@ -133,12 +150,14 @@ h2 {
     overflow: hidden; /* Ensures the border radius applies to child elements */
 }
 
+/* Table header styles */
 #searchTable thead,
 #showAllTable thead {
     background: #008000;
     color: white;
 }
 
+/* Table header cell styles */
 #searchTable th,
 #showAllTable th {
     text-align: left;
@@ -148,6 +167,7 @@ h2 {
     text-align: center;
 }
 
+/* Table data cell styles */
 #searchTable td,
 #showAllTable td {
     padding: 12px 15px;
@@ -156,6 +176,7 @@ h2 {
     color: #333;
 }
 
+/* Alternate row background colors */
 #searchTable tr:nth-child(odd),
 #showAllTable tr:nth-child(odd) {
     background-color: #f3f3f3; /* Light grey for odd rows */
@@ -166,6 +187,7 @@ h2 {
     background-color: #e1e1e1; /* Slightly darker grey for even rows */
 }
 
+/* Responsive styles for smaller screens */
 @media screen and (max-width: 768px) {
     .modal-content {
         width: 80%;
@@ -177,23 +199,25 @@ h2 {
     }
 }
 
+/* Additional styling for individual resort items */
 .resort-list .resort {
-    /* 1. Use padding and margins */
+    /* Padding and margin settings */
     padding: 10px;
     margin: 5px 0;
 
-    /* 3. Change the font */
+    /* Font and color settings */
     font-family: Arial, sans-serif;
     color: #333;
 
-    /* 4. Use borders and shadows */
+    /* Border and shadow settings */
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
+    /* Text alignment */
     text-align: center;
 }
 
-/* 5. Add hover effects */
+/* Hover effect for individual resort items */
 .resort-list .resort:hover {
     background-color: #87CEEB;
 }

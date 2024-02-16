@@ -1,3 +1,4 @@
+# Import necessary modules
 import os
 import time
 import requests
@@ -24,7 +25,7 @@ session.headers.update({
 
 # Constants
 BASE_URL = "https://ski-resort-forecast.p.rapidapi.com/{}/snowConditions"
-DELAY_BETWEEN_REQUESTS = 2
+DELAY_BETWEEN_REQUESTS = 1
 
 def parse_depth(measurement):
     # Parses the snow depth measurement and converts it to inches if necessary.

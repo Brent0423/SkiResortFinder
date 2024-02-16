@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Page title -->
     <title>USA Ski Resort Rankings</title>
+
+    <!-- Linking external CSS file -->
     <link
       rel="stylesheet"
       type="text/css"
       href="{{ url_for('static', filename='styles.css') }}"
     />
+
+    <!-- Preconnect links for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Font styles -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
@@ -21,28 +28,39 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
       rel="stylesheet"
     />
+
+    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
+    <!-- Page header -->
     <header>
       <div id="title">
         <h1>USA Ski Resort Rankings</h1>
       </div>
     </header>
+
+    <!-- Main content sections -->
     <div class="main-content">
+      <!-- Section for searching a ski resort -->
       <section id="search-resort">
         <h2>Search for a Ski Resort</h2>
         <div class="search-bar">
+          <!-- Search input field -->
           <input
             type="text"
             id="resortSearchBox"
             placeholder="Enter ski resort"
           />
+          <!-- Search button -->
           <button id="resortSearchButton">Search</button>
         </div>
+        <!-- Modal for displaying search results -->
         <div id="searchModal" class="modal">
           <div class="modal-content">
+            <!-- Close button -->
             <span class="close">&times;</span>
+            <!-- Table for displaying search results -->
             <table id="searchTable">
               <thead>
                 <tr>
@@ -61,14 +79,20 @@
           </div>
         </div>
       </section>
+
+      <!-- Section for displaying all ski resort rankings -->
       <section id="all-resorts">
         <h2>All Ski Resort Rankings</h2>
+        <!-- Button to show all ski resorts -->
         <button class="show-rankings-btn" id="thebutton">
           Show All Ski Resorts
         </button>
+        <!-- Modal for displaying all ski resort rankings -->
         <div id="showAllModal" class="modal">
           <div class="modal-content">
+            <!-- Close button -->
             <span class="close">&times;</span>
+            <!-- Table for displaying all ski resort rankings -->
             <table id="showAllTable">
               <thead>
                 <tr>
@@ -84,8 +108,11 @@
           </div>
         </div>
       </section>
+
+      <!-- Section for displaying today's top 5 ski resorts -->
       <section id="top-resorts">
         <h2>Today's Top 5 Ski Resorts</h2>
+        <!-- Ordered list for displaying top 5 ski resorts -->
         <ol class="resort-list">
           <li class="resort"></li>
           <li class="resort"></li>
@@ -95,6 +122,8 @@
         </ol>
       </section>
     </div>
+
+    <!-- Including JavaScript file -->
     <script src="{{ url_for('static', filename='main.js') }}"></script>
   </body>
 </html>
