@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch(url)
             .then(response => response.json())
             .then(data => {
+                // Log the retrieved data
+                console.log("Fetched data:", data);
                 // Display fetched data in modal
                 displayResortData(data);
 
@@ -56,20 +58,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to display fetched resort data inside the modal
     function displayResortData(data) {
+        console.log("Inside displayResortData function");
+        console.log("Resort data:", data);
+
+        // Log the structure of the first item in the data array
+        if (data.length > 0) {
+            console.log("First item structure:", Object.keys(data[0]));
+        }
+
         var modalContent = document.getElementById('showAllModalContent');
+        if (!modalContent) {
+            console.error("Modal content element not found");
+            return;
+        }
         modalContent.innerHTML = ''; // Clear previous content
 
-        // Adjust column headers
+        // Adjust column headers to include "REGION"
         document.querySelector("#showAllTable th:nth-child(1)").textContent = "RANK";
         document.querySelector("#showAllTable th:nth-child(2)").textContent = "RESORT";
-        document.querySelector("#showAllTable th:nth-child(3)").textContent = "SCORE";
+        document.querySelector("#showAllTable th:nth-child(3)").textContent = "REGION"; // Ensure this is added if missing
+        document.querySelector("#showAllTable th:nth-child(4)").textContent = "SCORE"; // Shift SCORE to fourth column
 
-        // Populate table rows with resort data
+        // Check if data is an array
+        if (!Array.isArray(data)) {
+            console.error("Data is not an array");
+            return;
+        }
+
+        // Populate table rows with resort data, including the region
         data.forEach((resort, index) => {
             var row = document.createElement('tr');
             row.innerHTML = `
                 <td>${index + 1}</td>
                 <td>${resort.name}</td>
+                <td>${resort.region || 'N/A'}</td> <!-- Include region here -->
                 <td>${resort.score}</td>
             `;
             modalContent.appendChild(row);
@@ -106,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var row = document.createElement('tr');
         row.innerHTML = `
             <td>${data.basicInfo.name}</td>
-            <td>${data.basicInfo.region}</td>
+            <td>${data.region || 'N/A'}</td> // Fix for missing or incorrect region
             <td>${data.botSnowDepth}</td>
             <td>${data.topSnowDepth}</td>
             <td>${data.freshSnowfall}</td>
@@ -120,13 +142,6 @@ document.addEventListener('DOMContentLoaded', function() {
         var modal = document.getElementById(modalId);
         modal.style.display = "block";
     }
-
-    // Event listener for the close button of the modal
-    document.querySelectorAll('.close').forEach(function(closeButton) {
-        closeButton.addEventListener('click', function() {
-            closeModal(this.parentElement.parentElement.id);
-        });
-    });
 
     // Function to close the modal
     function closeModal(modalId) {

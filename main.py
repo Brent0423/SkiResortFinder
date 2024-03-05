@@ -2,19 +2,16 @@
 import os
 import time
 import requests
-import logging
 from dotenv import load_dotenv
 from resorts import resorts
 
 # Load environment variables
 load_dotenv(dotenv_path='rapid.env')
+print("Environment variables loaded.")
 
 # Access the API_KEY environment variable
 api_key = os.getenv("API_KEY")
-
-# Initialize logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+print("API key accessed.")
 
 # Initialize a session for connection reuse
 session = requests.Session()
@@ -22,10 +19,12 @@ session.headers.update({
     "X-RapidAPI-Key": api_key,
     "X-RapidAPI-Host": "ski-resort-forecast.p.rapidapi.com"
 })
+print("Session initialized with headers.")
 
 # Constants
 BASE_URL = "https://ski-resort-forecast.p.rapidapi.com/{}/snowConditions"
 DELAY_BETWEEN_REQUESTS = 1
+print("Constants set.")
 
 def parse_depth(measurement):
     # Parses the snow depth measurement and converts it to inches if necessary.
@@ -38,61 +37,65 @@ def parse_depth(measurement):
     elif measurement.endswith('in'):
         return int(measurement.rstrip('in'))
     else:
-        logger.warning(f"Measurement format for '{measurement}' not recognized.")
         return 0
+    print("Snow depth measurement parsed.")
 
 def fetch_resort_data_sequentially(resorts):
     # Fetches resort data using sequential requests with delay.
+    if not resorts:
+        return None
     resort_data = {}
     for resort in resorts:
         try:
             formatted_resort_name = resort.replace(" ", "%20")
             url = BASE_URL.format(formatted_resort_name)
             response = session.get(url, timeout=5)  # Use session for requests
-            response.raise_for_status()
-            resort_data[resort] = response.json()
-            logger.info(f"Data fetched for {resort}.")
+            if response.status_code == 200:
+                data = response.json()
+                resort_data[resort] = data
+                print(f"Fetching data for {resort}...")  # Log for each resort fetched
+            else:
+                resort_data[resort] = None
         except requests.exceptions.RequestException as e:
-            logger.error(f"Request error for {resort}: {e}")
             resort_data[resort] = None  # Handle errors by setting data to None
-            logger.warning(f"Data for {resort} is set to None due to errors.")
         time.sleep(DELAY_BETWEEN_REQUESTS)  # Wait for specified delay to avoid hitting rate limits
     return resort_data
+    print("Resort data fetched sequentially.")
 
 def process_resort_data(resort_data):
-    # Processes the raw resort data and extracts relevant snow condition information.
+    if not resort_data:
+        return None
     processed_data = {}
     for resort, data in resort_data.items():
-        snow_data = data.get('imperial', {})
+        if data is None or 'imperial' not in data:
+            continue
+        imperial_data = data['imperial']
+        # Safely access nested 'region' value
+        region = imperial_data.get('basicInfo', {}).get('region', 'N/A')
         processed_data[resort] = {
-            'topSnowDepth': parse_depth(snow_data.get('topSnowDepth', '0in')),
-            'botSnowDepth': parse_depth(snow_data.get('botSnowDepth', '0in')),
-            'freshSnowfall': parse_depth(snow_data.get('freshSnowfall', '0in')),
+            'topSnowDepth': parse_depth(imperial_data.get('topSnowDepth', '0in')),
+            'botSnowDepth': parse_depth(imperial_data.get('botSnowDepth', '0in')),
+            'freshSnowfall': parse_depth(imperial_data.get('freshSnowfall', '0in')),
+            'region': region  # Safely extracted region
         }
     return processed_data
+    print("Resort data processed.")
 
 def sort_resorts(processed_data):
     # Ranks resorts based on normalized snow condition scores.
     if not processed_data:
         return []
     max_values = {
-        'topSnowDepth': max(resort_data['topSnowDepth'] for resort_data in processed_data.values() if resort_data['topSnowDepth']),
-        'botSnowDepth': max(resort_data['botSnowDepth'] for resort_data in processed_data.values() if resort_data['botSnowDepth']),
-        'freshSnowfall': max(resort_data['freshSnowfall'] for resort_data in processed_data.values() if resort_data['freshSnowfall']),
+        'topSnowDepth': max((resort_data['topSnowDepth'] for resort_data in processed_data.values() if 'topSnowDepth' in resort_data and resort_data['topSnowDepth']), default=0),
+        'botSnowDepth': max((resort_data['botSnowDepth'] for resort_data in processed_data.values() if 'botSnowDepth' in resort_data and resort_data['botSnowDepth']), default=0),
+        'freshSnowfall': max((resort_data['freshSnowfall'] for resort_data in processed_data.values() if 'freshSnowfall' in resort_data and resort_data['freshSnowfall']), default=0),
     }
 
     for resort_data in processed_data.values():
         for key, value in max_values.items():
-            resort_data[key] /= value if value != 0 else 1  # Prevent division by zero
+            if key != 'region':  # Ensure 'region' is not included in normalization
+                resort_data[key] = resort_data.get(key, 0) / (value if value != 0 else 1)  # Prevent division by zero
 
-    total_scores = {resort: sum(resort_data.values()) for resort, resort_data in processed_data.items()}
+    total_scores = {resort: sum(resort_data[key] for key in resort_data if key != 'region') for resort, resort_data in processed_data.items()}
     return sorted(total_scores.items(), key=lambda x: x[1], reverse=True)
-
-if __name__ == "__main__":
-    logger.info("Starting to fetch resort data...")
-    raw_data = fetch_resort_data_sequentially(resorts)
-    processed_data = process_resort_data(raw_data)
-    top_resorts = sort_resorts(processed_data)
-    logger.info("\nTop Resorts based on snow conditions:")
-    for resort, score in top_resorts:
-        logger.info(f"{resort}: Score {score}")
+    print("Resorts sorted based on normalized snow condition scores.")
