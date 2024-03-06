@@ -18,35 +18,8 @@ def home():
     # Use the predefined list of resorts from the resorts module
     resort_list = resorts
 
-    # Fetch resort data sequentially for the predefined list of resorts
-    raw_data = fetch_resort_data_sequentially(resorts)
-    print("Fetching resort data sequentially...")
-
-    # Check if raw data is None
-    if raw_data is None:
-        print("Error: Unable to fetch resort data")
-        return "Error: Unable to fetch resort data", 500
-
-    # Process the resort data
-    processed_data = process_resort_data(raw_data)
-    print("Processing resort data...")
-
-    # Check if processed data is None
-    if processed_data is None:
-        print("Error: Unable to process resort data")
-        return "Error: Unable to process resort data", 500
-
-    # Sort the resorts
-    rankings = sort_resorts(processed_data)
-    print("Sorting resorts...")
-
-    # Check if rankings is None
-    if rankings is None:
-        print("Error: Unable to sort resorts")
-        return "Error: Unable to sort resorts", 500
-
     # Render the index.html template with the data and enumerate function
-    return render_template('index.html', data=rankings, enumerate=enumerate)
+    return render_template('index.html', data={}, enumerate=enumerate)
 
 # Resorts API route
 @app.route('/api/resorts')
@@ -103,25 +76,15 @@ def search_resort():
 
 # Helper function to load resort data
 def load_resort_data():
-    # Check if the resort_data.json file exists
-    if os.path.exists('resort_data.json'):
-        print("Resort data file found")
-        # Open the file and load the JSON data
-        with open('resort_data.json', 'r') as f:
-            return json.load(f)
-    else:
-        print("Resort data file not found, fetching and processing resort data...")
-        # Fetch and process resort data
+    # Check if resort data already exists to avoid redundant fetching
+    try:
+        with open('resort_data.json', 'r') as file:
+            resort_data = json.load(file)
+            print("Resort data loaded from file.")
+            return resort_data
+    except FileNotFoundError:
+        print("Resort data file not found. Fetching and processing resort data...")
         resort_data = fetch_and_process_resort_data()
-
-        # Check if resort data is None
-        if resort_data is None:
-            return None
-
-        # Save resort data to resort_data.json
-        save_resort_data(resort_data)
-
-        # Return the resort data
         return resort_data
 
 # Helper function to fetch and process resort data
@@ -154,15 +117,15 @@ def fetch_and_process_resort_data():
     if not all(resort['name'] for resort in resort_data_list):
         return None  # Return None if any resort data is missing or incorrect
 
+    # Save resort data to resort_data.json
+    save_resort_data(resort_data_list)
+
     return resort_data_list
 
-# New endpoint to trigger sequential data fetching and logging
 @app.route('/api/sequential-fetch')
 def fetch_resorts_data():
     print("Starting sequential data fetching for resorts...")
-    for resort in resorts:
-        print(f"Fetching data for {resort}...")
-        fetch_resort_data_sequentially([resort])
+    fetch_resort_data_sequentially(resorts)
     return jsonify({"message": "Data fetching initiated for all resorts."})
 
 # Run the Flask app if this file is executed directly.

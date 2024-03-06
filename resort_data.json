@@ -6,18 +6,18 @@
     },
     {
         "name": "49 Degrees North",
-        "score": 51.63566666666666,
+        "score": 52.82600000000001,
         "region": "USA - Washington"
+    },
+    {
+        "name": "Alpenglow",
+        "score": 12.5,
+        "region": "USA - Alaska"
     },
     {
         "name": "Afton Alps",
         "score": 9.966000000000001,
         "region": "USA - Minnesota"
-    },
-    {
-        "name": "Alpenglow",
-        "score": 0.0,
-        "region": "USA - Alaska"
     },
     {
         "name": "Alpine Mountain",

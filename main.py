@@ -46,6 +46,7 @@ def fetch_resort_data_sequentially(resorts):
         return None
     resort_data = {}
     for resort in resorts:
+        print(f"Fetching data for {resort}...")  # Print each resort as they are being iterated
         try:
             formatted_resort_name = resort.replace(" ", "%20")
             url = BASE_URL.format(formatted_resort_name)
@@ -102,14 +103,3 @@ def sort_resorts(processed_data):
     sorted_resorts = sorted(normalized_scores.items(), key=lambda x: x[1], reverse=True)
     print("Resorts sorted based on normalized snow condition scores.")
     return sorted_resorts
-
-def check_json_file():
-    # Check if a JSON file already exists or if data needs to be fetched
-    if os.path.exists('resort_data.json'):
-        print("JSON file already exists.")
-        return True
-    else:
-        print("JSON file does not exist. Data needs to be fetched.")
-        return False
-
-check_json_file()
