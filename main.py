@@ -53,14 +53,13 @@ def fetch_resort_data_sequentially(resorts):
             if response.status_code == 200:
                 data = response.json()
                 resort_data[resort] = data
-                print(f"Fetching data for {resort}...")  # Log for each resort fetched
             else:
                 resort_data[resort] = None
         except requests.exceptions.RequestException as e:
             resort_data[resort] = None  # Handle errors by setting data to None
         time.sleep(DELAY_BETWEEN_REQUESTS)  # Wait for specified delay to avoid hitting rate limits
-    return resort_data
     print("Resort data fetched sequentially.")
+    return resort_data
 
 def process_resort_data(resort_data):
     if not resort_data:
@@ -78,24 +77,39 @@ def process_resort_data(resort_data):
             'freshSnowfall': parse_depth(imperial_data.get('freshSnowfall', '0in')),
             'region': region  # Safely extracted region
         }
-    return processed_data
+
+    # Calculate percentile scores for each snow condition
+    for key in ['topSnowDepth', 'botSnowDepth', 'freshSnowfall']:
+        values = [float(processed_data[resort][key]) for resort in processed_data if key in processed_data[resort]]
+        if values:
+            max_value = max(values)
+            percentile_scores = {resort: f"{round((value / max_value) * 100, 3)}%" for resort, value in zip(processed_data.keys(), values)}
+            for resort in processed_data:
+                if key in processed_data[resort]:
+                    processed_data[resort][key] = percentile_scores[resort]
+
     print("Resort data processed.")
+    return processed_data
 
 def sort_resorts(processed_data):
     # Ranks resorts based on normalized snow condition scores.
     if not processed_data:
         return []
-    max_values = {
-        'topSnowDepth': max((resort_data['topSnowDepth'] for resort_data in processed_data.values() if 'topSnowDepth' in resort_data and resort_data['topSnowDepth']), default=0),
-        'botSnowDepth': max((resort_data['botSnowDepth'] for resort_data in processed_data.values() if 'botSnowDepth' in resort_data and resort_data['botSnowDepth']), default=0),
-        'freshSnowfall': max((resort_data['freshSnowfall'] for resort_data in processed_data.values() if 'freshSnowfall' in resort_data and resort_data['freshSnowfall']), default=0),
-    }
 
-    for resort_data in processed_data.values():
-        for key, value in max_values.items():
-            if key != 'region':  # Ensure 'region' is not included in normalization
-                resort_data[key] = resort_data.get(key, 0) / (value if value != 0 else 1)  # Prevent division by zero
-
-    total_scores = {resort: sum(resort_data[key] for key in resort_data if key != 'region') for resort, resort_data in processed_data.items()}
-    return sorted(total_scores.items(), key=lambda x: x[1], reverse=True)
+    total_scores = {resort: sum([float(resort_data[key].rstrip('%')) for key in resort_data if key != 'region']) for resort, resort_data in processed_data.items()}
+    max_score = max(total_scores.values())
+    normalized_scores = {resort: (score / max_score) * 100 for resort, score in total_scores.items()}
+    sorted_resorts = sorted(normalized_scores.items(), key=lambda x: x[1], reverse=True)
     print("Resorts sorted based on normalized snow condition scores.")
+    return sorted_resorts
+
+def check_json_file():
+    # Check if a JSON file already exists or if data needs to be fetched
+    if os.path.exists('resort_data.json'):
+        print("JSON file already exists.")
+        return True
+    else:
+        print("JSON file does not exist. Data needs to be fetched.")
+        return False
+
+check_json_file()

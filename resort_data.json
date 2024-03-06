@@ -1,17 +1,17 @@
 [
     {
         "name": "Alpental At The Summit",
-        "score": 3.0,
+        "score": 100.0,
         "region": "USA - Washington"
     },
     {
         "name": "49 Degrees North",
-        "score": 1.549062049062049,
+        "score": 51.63566666666666,
         "region": "USA - Washington"
     },
     {
         "name": "Afton Alps",
-        "score": 0.2989718614718615,
+        "score": 9.966000000000001,
         "region": "USA - Minnesota"
     },
     {
@@ -26,6 +26,11 @@
     },
     {
         "name": "Alpine Valley",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Alpine Valley Resort",
         "score": 0.0,
         "region": "USA - Michigan"
     },

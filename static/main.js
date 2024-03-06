@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${index + 1}</td>
                 <td>${resort.name}</td>
                 <td>${resort.region || 'N/A'}</td> <!-- Include region here -->
-                <td>${resort.score}</td>
+                <td>${parseFloat(resort.score).toFixed(3)}%</td> <!-- Display score with 3 decimals -->
             `;
             modalContent.appendChild(row);
         });
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var row = document.createElement('tr');
         row.innerHTML = `
             <td>${data.basicInfo.name}</td>
-            <td>${data.region || 'N/A'}</td> // Fix for missing or incorrect region
+            <td>${data.basicInfo.region || 'N/A'}</td>
             <td>${data.botSnowDepth}</td>
             <td>${data.topSnowDepth}</td>
             <td>${data.freshSnowfall}</td>
@@ -156,6 +156,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (event.target == modal) {
                 closeModal(modalId);
             }
+        });
+    });
+
+    // Close modal when clicking the 'x' button
+    var closeButtons = document.querySelectorAll('.close');
+    closeButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var modal = button.closest('.modal');
+            closeModal(modal.id);
         });
     });
 });
