@@ -4,6 +4,7 @@ import time
 import requests
 from dotenv import load_dotenv
 from resorts import resorts
+import concurrent.futures
 
 # Load environment variables
 load_dotenv(dotenv_path='rapid.env')
@@ -40,26 +41,32 @@ def parse_depth(measurement):
         return 0
     print("Snow depth measurement parsed.")
 
-def fetch_resort_data_sequentially(resorts):
-    # Fetches resort data using sequential requests with delay.
-    if not resorts:
-        return None
+def fetch_single_resort_data(resort):
+    print(f"Fetching data for {resort}...")  # Print each resort as they are being iterated
+    try:
+        formatted_resort_name = resort.replace(" ", "%20")
+        url = BASE_URL.format(formatted_resort_name)
+        response = session.get(url, timeout=5)  # Use session for requests
+        if response.status_code == 200:
+            data = response.json()
+            return {resort: data}
+        else:
+            return {resort: None}
+    except requests.exceptions.RequestException as e:
+        return {resort: None}  # Handle errors by setting data to None
+
+def fetch_resort_data_concurrently(resorts):
     resort_data = {}
-    for resort in resorts:
-        print(f"Fetching data for {resort}...")  # Print each resort as they are being iterated
-        try:
-            formatted_resort_name = resort.replace(" ", "%20")
-            url = BASE_URL.format(formatted_resort_name)
-            response = session.get(url, timeout=5)  # Use session for requests
-            if response.status_code == 200:
-                data = response.json()
-                resort_data[resort] = data
-            else:
-                resort_data[resort] = None
-        except requests.exceptions.RequestException as e:
-            resort_data[resort] = None  # Handle errors by setting data to None
-        time.sleep(DELAY_BETWEEN_REQUESTS)  # Wait for specified delay to avoid hitting rate limits
-    print("Resort data fetched sequentially.")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        future_to_resort = {executor.submit(fetch_single_resort_data, resort): resort for resort in resorts}
+        for future in concurrent.futures.as_completed(future_to_resort):
+            resort = future_to_resort[future]
+            try:
+                data = future.result()
+                resort_data.update(data)
+            except Exception as exc:
+                print(f'{resort} generated an exception: {exc}')
+    print("Resort data fetched concurrently.")
     return resort_data
 
 def process_resort_data(resort_data):

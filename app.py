@@ -6,7 +6,7 @@ from flask import Flask, render_template, jsonify, request
 from resorts import resorts
 
 # Import functions from other files
-from main import fetch_resort_data_sequentially, process_resort_data, sort_resorts  # Updated import statement
+from main import fetch_resort_data_concurrently, process_resort_data, sort_resorts
 from save_data import save_resort_data  # Updated import statement
 
 # Create Flask app
@@ -89,15 +89,15 @@ def load_resort_data():
 
 # Helper function to fetch and process resort data
 def fetch_and_process_resort_data():
-    # Fetch resort data sequentially
-    raw_data = fetch_resort_data_sequentially(resorts)
+    # Fetch resort data concurrently
+    resort_data = fetch_resort_data_concurrently(resorts)
 
-    # Check if raw data is None
-    if raw_data is None:
+    # Check if resort data is None
+    if resort_data is None:
         return None
 
     # Process the resort data
-    processed_data = process_resort_data(raw_data)
+    processed_data = process_resort_data(resort_data)
 
     # Check if processed data is None
     if processed_data is None:
