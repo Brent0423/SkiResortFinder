@@ -6,7 +6,7 @@ from flask import Flask, render_template, jsonify, request
 from resorts import resorts
 
 # Import functions from other files
-from main import fetch_resort_data_concurrently, process_resort_data, sort_resorts
+from main import fetch_resort_data_sequentially, process_resort_data, sort_resorts
 from save_data import save_resort_data  # Updated import statement
 
 # Create Flask app
@@ -90,7 +90,7 @@ def load_resort_data():
 # Helper function to fetch and process resort data
 def fetch_and_process_resort_data():
     # Fetch resort data concurrently
-    resort_data = fetch_resort_data_concurrently(resorts)
+    resort_data = fetch_resort_data_sequentially(resorts)
 
     # Check if resort data is None
     if resort_data is None:
@@ -121,12 +121,6 @@ def fetch_and_process_resort_data():
     save_resort_data(resort_data_list)
 
     return resort_data_list
-
-@app.route('/api/sequential-fetch')
-def fetch_resorts_data():
-    print("Starting sequential data fetching for resorts...")
-    fetch_resort_data_sequentially(resorts)
-    return jsonify({"message": "Data fetching initiated for all resorts."})
 
 # Run the Flask app if this file is executed directly.
 if __name__ == '__main__':

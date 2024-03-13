@@ -92,13 +92,52 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${index + 1}</td>
                 <td>${resort.name}</td>
                 <td>${resort.region || 'N/A'}</td> <!-- Include region here -->
-                <td>${parseFloat(resort.score).toFixed(3)}%</td> <!-- Display score with 3 decimals -->
+                <td>${parseFloat(resort.score).toFixed(5)}%</td> <!-- Display score with 5 decimals -->
             `;
             modalContent.appendChild(row);
         });
+
+        // Make columns sortable by attaching click event listeners to headers
+        makeColumnsSortable();
     }
 
-    // Function to update top resorts list
+    // Function to make columns sortable
+    function makeColumnsSortable() {
+        const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+        const comparer = (idx, asc, isNumeric) => (a, b) => {
+            let valueA = getCellValue(a, idx);
+            let valueB = getCellValue(b, idx);
+
+            if (isNumeric) {
+                valueA = valueA !== null ? parseFloat(valueA) : null;
+                valueB = valueB !== null ? parseFloat(valueB) : null;
+            }
+
+            if (valueA === null || valueB === null) {
+                return asc ? 1 : -1; // Place null values at the end
+            }
+
+            if (isNumeric) {
+                return asc ? valueA - valueB : valueB - valueA;
+            } else {
+                return asc ? valueA.localeCompare(valueB) : valueB.localeCompare(valueA);
+            }
+        };
+
+        // Attach click event to all th elements
+        document.querySelectorAll('#showAllTable th').forEach(th => th.addEventListener('click', (() => {
+            const table = th.closest('table');
+            const tbody = table.querySelector('tbody');
+            const isNumeric = !isNaN(parseFloat(tbody.rows[0].cells[th.cellIndex].textContent)); // Check if the first row in the column is numeric
+            Array.from(tbody.querySelectorAll('tr'))
+                .sort(comparer(th.cellIndex, this.asc = !this.asc, isNumeric))
+                .forEach(tr => tbody.appendChild(tr));
+        })));
+    }
+
+    // Reattach event listener for making columns sortable multiple times
+    makeColumnsSortable();
+
     function updateTopResortsList(resorts) {
         var resortList = document.querySelectorAll('.resort-list .resort');
         // Clear existing list content before updating
@@ -111,31 +150,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Function to display individual resort data inside the modal
-    function individualResortData(data) {
-        var modalContent = document.getElementById('searchModalContent');
-        modalContent.innerHTML = ''; // Clear previous content
+        // Function to display individual resort data inside the modal
+        function individualResortData(data) {
+            var modalContent = document.getElementById('searchModalContent');
+            modalContent.innerHTML = ''; // Clear previous content
 
-        // Adjust column headers
-        document.querySelector("#searchTable th:nth-child(1)").textContent = "Resort";
-        document.querySelector("#searchTable th:nth-child(2)").textContent = "Region";
-        document.querySelector("#searchTable th:nth-child(3)").textContent = "Bottom Snow Depth";
-        document.querySelector("#searchTable th:nth-child(4)").textContent = "Top Snow Depth";
-        document.querySelector("#searchTable th:nth-child(5)").textContent = "Recent Snowfall Amount";
-        document.querySelector("#searchTable th:nth-child(6)").textContent = "Last Snowfall Date";
+            // Adjust column headers
+            document.querySelector("#searchTable th:nth-child(1)").textContent = "Resort";
+            document.querySelector("#searchTable th:nth-child(2)").textContent = "Region";
+            document.querySelector("#searchTable th:nth-child(3)").textContent = "Bottom Snow Depth";
+            document.querySelector("#searchTable th:nth-child(4)").textContent = "Top Snow Depth";
+            document.querySelector("#searchTable th:nth-child(5)").textContent = "Recent Snowfall Amount";
+            document.querySelector("#searchTable th:nth-child(6)").textContent = "Last Snowfall Date";
 
-        // Populate table row with individual resort data
-        var row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${data.basicInfo.name}</td>
-            <td>${data.basicInfo.region || 'N/A'}</td>
-            <td>${data.botSnowDepth}</td>
-            <td>${data.topSnowDepth}</td>
-            <td>${data.freshSnowfall}</td>
-            <td>${data.lastSnowfallDate}</td>
-        `;
-        modalContent.appendChild(row);
-    }
+            // Populate table row with individual resort data
+            var row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${data.basicInfo.name}</td>
+                <td>${data.basicInfo.region || 'N/A'}</td>
+                <td>${data.botSnowDepth}</td>
+                <td>${data.topSnowDepth}</td>
+                <td>${data.freshSnowfall}</td>
+                <td>${data.lastSnowfallDate}</td>
+            `;
+            modalContent.appendChild(row);
+        }
 
     // Function to open the modal
     function openModal(modalId) {
@@ -151,20 +190,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Optional: Close the modal when clicking outside of it
     window.addEventListener('click', function(event) {
-        ['searchModal', 'showAllModal'].forEach(function(modalId) {
-            var modal = document.getElementById(modalId);
-            if (event.target == modal) {
-                closeModal(modalId);
-            }
-        });
+        if (event.target == document.getElementById('searchModal') || event.target == document.getElementById('showAllModal')) {
+            closeModal(event.target.id);
+        }
     });
 
     // Close modal when clicking the 'x' button
-    var closeButtons = document.querySelectorAll('.close');
-    closeButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            var modal = button.closest('.modal');
-            closeModal(modal.id);
+    document.querySelectorAll('.close').forEach(button => {
+        button.addEventListener('click', function(event) {
+            var modalId = button.closest('.modal').id;
+            closeModal(modalId);
+            event.stopPropagation(); // Prevents the modal from reopening when the 'x' button is clicked
         });
     });
 });

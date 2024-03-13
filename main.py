@@ -24,7 +24,7 @@ print("Session initialized with headers.")
 
 # Constants
 BASE_URL = "https://ski-resort-forecast.p.rapidapi.com/{}/snowConditions"
-DELAY_BETWEEN_REQUESTS = 1
+DELAY_BETWEEN_REQUESTS = .5
 print("Constants set.")
 
 def parse_depth(measurement):
@@ -43,6 +43,7 @@ def parse_depth(measurement):
 
 def fetch_single_resort_data(resort):
     print(f"Fetching data for {resort}...")  # Print each resort as they are being iterated
+    time.sleep(DELAY_BETWEEN_REQUESTS)  # Add a delay between requests
     try:
         formatted_resort_name = resort.replace(" ", "%20")
         url = BASE_URL.format(formatted_resort_name)
@@ -55,18 +56,12 @@ def fetch_single_resort_data(resort):
     except requests.exceptions.RequestException as e:
         return {resort: None}  # Handle errors by setting data to None
 
-def fetch_resort_data_concurrently(resorts):
+def fetch_resort_data_sequentially(resorts):
     resort_data = {}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        future_to_resort = {executor.submit(fetch_single_resort_data, resort): resort for resort in resorts}
-        for future in concurrent.futures.as_completed(future_to_resort):
-            resort = future_to_resort[future]
-            try:
-                data = future.result()
-                resort_data.update(data)
-            except Exception as exc:
-                print(f'{resort} generated an exception: {exc}')
-    print("Resort data fetched concurrently.")
+    for resort in resorts:
+        data = fetch_single_resort_data(resort)
+        resort_data.update(data)
+    print("Resort data fetched sequentially.")
     return resort_data
 
 def process_resort_data(resort_data):
