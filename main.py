@@ -24,7 +24,7 @@ print("Session initialized with headers.")
 
 # Constants
 BASE_URL = "https://ski-resort-forecast.p.rapidapi.com/{}/snowConditions"
-DELAY_BETWEEN_REQUESTS = .5
+DELAY_BETWEEN_REQUESTS = 1
 print("Constants set.")
 
 def parse_depth(measurement):

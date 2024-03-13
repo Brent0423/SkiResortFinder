@@ -7,7 +7,6 @@ resorts = [
     "Alpine Mountain",
     "Alpine Valley",
     "Alpine Valley Resort",
-    "Alpine Valley Ski Area",
     "Alta",
     "Alta Sierra at Shirley Meadows",
     "Alyeska Resort",

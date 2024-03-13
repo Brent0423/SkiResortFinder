@@ -124,4 +124,4 @@ def fetch_and_process_resort_data():
 
 # Run the Flask app if this file is executed directly.
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)

@@ -3,60 +3,61 @@ from urllib.parse import quote_plus
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from 'rapid.env' file
+# Load environment variables from a .env file for secure access to sensitive data
 load_dotenv(dotenv_path='rapid.env')
 
-# Access the API_KEY environment variable
+# Retrieve the API key from environment variables for authentication
 api_key = os.getenv("API_KEY")
 
 def search_resort(resort_name):
     """
-    Search for snow conditions of a resort.
+    Searches for snow conditions of a given ski resort by name.
 
-    Args:
-        resort_name (str): The name of the resort to search for.
+    Parameters:
+    resort_name (str): The name of the ski resort to search for.
 
     Returns:
-        dict or None: Dictionary containing snow conditions if found, else None.
+    dict: The snow conditions data for the specified resort, or None if an error occurs.
     """
     try:
-        # Ensure the resort name is not empty
+        # Validate input to ensure meaningful search query
         if not resort_name:
             print("Error: Resort name cannot be empty.")
             return None
 
-        # Encode the resort name for URL
+        # Prepare the resort name for inclusion in the URL by encoding special characters
         encoded_resort_name = quote_plus(resort_name)
         url = f"https://ski-resort-forecast.p.rapidapi.com/{encoded_resort_name}/snowConditions"
 
-        # Define headers for API request
+        # Set up the request headers with the necessary API credentials
         headers = {
-            "X-RapidAPI-Key": api_key,  # Use the API key from environment variables
-            "X-RapidAPI-Host": "ski-resort-forecast.p.rapidapi.com"
+            "X-RapidAPI-Key": api_key,  # Authentication key
+            "X-RapidAPI-Host": "ski-resort-forecast.p.rapidapi.com"  # API host
         }
 
-        # Make a GET request to fetch snow conditions data
+        # Execute the GET request to retrieve snow conditions data from the API
         response = requests.get(url, headers=headers)
-        response.raise_for_status()  # Raises an exception for 4XX or 5XX status codes
+        response.raise_for_status()  # Ensure a successful response (2XX status code)
 
-        # Parse JSON response
+        # Convert the JSON response into a Python dictionary and return it
         data = response.json()
         return data
 
     except requests.exceptions.RequestException as e:
-        # Handle request exception
+        # Log any errors encountered during the request to the console
         print("Error fetching data:", e)
         return None
 
-# Example usage:
+# Demonstrate the function's usage in a standalone script context
 if __name__ == "__main__":
-    # Define the resort name to search for
+    # Specify the resort name to search for
     search_value = "YourResortName"
-    # Search for snow conditions data of the specified resort
+    # Attempt to retrieve and print the snow conditions data for the specified resort
     resort_data = search_resort(search_value)
     if resort_data:
-        # Print resort data if found
+        # Successfully retrieved data
         print(resort_data)
     else:
-        # Notify if no data found for the specified resort
+        # Data retrieval failed or no data available
         print("No data found for the specified resort.")
+
