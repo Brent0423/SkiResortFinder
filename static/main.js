@@ -84,17 +84,29 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error("Data is not an array");
             return;
         }
-
         // Populate table rows with resort data, including the region
+        let rank = 0; // Initialize rank
+        let previousScore = null; // To keep track of the previous score
+
         data.forEach((resort, index) => {
             var row = document.createElement('tr');
+            let currentScore = parseFloat(resort.score).toFixed(5);
+
+            // Check if the current score is the same as the previous score
+            if (previousScore !== currentScore) {
+                rank++; // Increment rank only when scores are different
+            }
+
+            // Create the table row with the current rank and resort data
             row.innerHTML = `
-                <td>${index + 1}</td>
+                <td>${rank}</td>
                 <td>${resort.name}</td>
-                <td>${resort.region || 'N/A'}</td> <!-- Include region here -->
-                <td>${parseFloat(resort.score).toFixed(5)}%</td> <!-- Display score with 5 decimals -->
+                <td>${resort.region || 'N/A'}</td>
+                <td>${currentScore}%</td>
             `;
             modalContent.appendChild(row);
+
+            previousScore = currentScore; // Update previous score to current score
         });
 
         // Make columns sortable by attaching click event listeners to headers

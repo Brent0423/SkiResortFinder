@@ -1,0 +1,2217 @@
+[
+    {
+        "name": "Boreal Mountain",
+        "score": 100.0,
+        "region": "USA - California"
+    },
+    {
+        "name": "Mt Hood Meadows",
+        "score": 96.02521794808649,
+        "region": "USA - Oregon"
+    },
+    {
+        "name": "Timberline",
+        "score": 91.1087926996906,
+        "region": "USA - Oregon"
+    },
+    {
+        "name": "Alta",
+        "score": 85.57714265245173,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Mount Baker",
+        "score": 84.05296127307653,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Alpental At The Summit",
+        "score": 77.82728033922439,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Sugar Bowl",
+        "score": 72.75951158136057,
+        "region": "USA - California"
+    },
+    {
+        "name": "Bear Valley",
+        "score": 68.33741542897826,
+        "region": "USA - California"
+    },
+    {
+        "name": "White Pass Village",
+        "score": 67.23592124764365,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Snowbird",
+        "score": 66.90099537461997,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Brighton Resort",
+        "score": 66.42189018192565,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Grand Targhee",
+        "score": 66.31039747820519,
+        "region": "USA - Wyoming"
+    },
+    {
+        "name": "Winter Park",
+        "score": 65.9669641297972,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Snowbasin",
+        "score": 65.83129228551087,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Mammoth Mountain",
+        "score": 62.55098888207296,
+        "region": "USA - California"
+    },
+    {
+        "name": "Eldora Mountain Resort",
+        "score": 61.058598594923275,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Mt Bachelor",
+        "score": 60.236507815683304,
+        "region": "USA - Oregon"
+    },
+    {
+        "name": "Solitude",
+        "score": 60.14113453900677,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Alyeska Resort",
+        "score": 59.88546251561569,
+        "region": "USA - Alaska"
+    },
+    {
+        "name": "Palisades Tahoe",
+        "score": 58.759341431852874,
+        "region": "USA - California"
+    },
+    {
+        "name": "Steamboat",
+        "score": 56.42068122489735,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Pomerelle Mountain Resort",
+        "score": 54.70530553030676,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Kirkwood",
+        "score": 53.63560244119767,
+        "region": "USA - California"
+    },
+    {
+        "name": "Arapahoe Basin",
+        "score": 52.981422360331884,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Brundage Mountain Resort",
+        "score": 52.70157119637492,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Powder Mountain",
+        "score": 52.42261555614262,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Hoodoo Ski Area",
+        "score": 51.79933104377768,
+        "region": "USA - Oregon"
+    },
+    {
+        "name": "Northstar at Tahoe",
+        "score": 51.72007719414506,
+        "region": "USA - California"
+    },
+    {
+        "name": "Sierra at Tahoe",
+        "score": 51.24097200145074,
+        "region": "USA - California"
+    },
+    {
+        "name": "Mt Ashland",
+        "score": 50.506642547227685,
+        "region": "USA - Oregon"
+    },
+    {
+        "name": "Echo Mountain",
+        "score": 49.964402931944676,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Irwin Catskiing by Eleven",
+        "score": 49.54887992370138,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Mt Hood Ski Bowl",
+        "score": 48.98246116785249,
+        "region": "USA - Oregon"
+    },
+    {
+        "name": "Dodge Ridge",
+        "score": 47.87290727299593,
+        "region": "USA - California"
+    },
+    {
+        "name": "Sundance",
+        "score": 47.63335467664877,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Snowy Range Ski and Recreation Area",
+        "score": 47.47439921552122,
+        "region": "USA - Wyoming"
+    },
+    {
+        "name": "Loveland",
+        "score": 46.58827848996789,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Breckenridge",
+        "score": 46.47589026252278,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Bogus Basin",
+        "score": 45.957382025943325,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Park City",
+        "score": 45.66185919680478,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Beaver Mountain",
+        "score": 45.66185919680477,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Crystal Mountain",
+        "score": 45.50245597381489,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Brian Head Resort",
+        "score": 44.08215534650052,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Mt Rose Ski at Tahoe",
+        "score": 43.10021358240834,
+        "region": "USA - Nevada"
+    },
+    {
+        "name": "Anthony Lakes Mountain Resort",
+        "score": 42.789019088088196,
+        "region": "USA - Oregon"
+    },
+    {
+        "name": "Schweitzer Mountain",
+        "score": 42.549466491741036,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "49 Degrees North",
+        "score": 42.1823017646295,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Keystone",
+        "score": 42.16663009944791,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Silver Mountain",
+        "score": 41.759166804726576,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Willamette Pass",
+        "score": 41.6315546739622,
+        "region": "USA - Oregon"
+    },
+    {
+        "name": "Ski Santa Fe",
+        "score": 40.98498654475603,
+        "region": "USA - New Mexico"
+    },
+    {
+        "name": "Jackson Hole",
+        "score": 40.929016311964645,
+        "region": "USA - Wyoming"
+    },
+    {
+        "name": "Tamarack",
+        "score": 40.857374413991664,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Vail",
+        "score": 40.50588135206172,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Telluride",
+        "score": 40.19513461960391,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "China Peak",
+        "score": 39.508267922787944,
+        "region": "USA - California"
+    },
+    {
+        "name": "Copper Mountain",
+        "score": 39.06946129770343,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Beaver Creek",
+        "score": 38.590356105009114,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Crested Butte",
+        "score": 38.47886340128866,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Diamond Peak",
+        "score": 38.31140046477681,
+        "region": "USA - Nevada"
+    },
+    {
+        "name": "Hogadon",
+        "score": 38.279609372551306,
+        "region": "USA - Wyoming"
+    },
+    {
+        "name": "Wolf Creek Ski Area",
+        "score": 37.40916031217957,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Powderhorn",
+        "score": 37.15393605065083,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Sunrise Park Resort",
+        "score": 36.84274155633068,
+        "region": "USA - Arizona"
+    },
+    {
+        "name": "Sunrise Ski Area",
+        "score": 36.84274155633068,
+        "region": "USA - Arizona"
+    },
+    {
+        "name": "Aspen Highlands",
+        "score": 36.746920517791814,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Ski Cooper",
+        "score": 36.730801090747896,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Sun Valley",
+        "score": 36.45139768865327,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Eagle Point Resort",
+        "score": 35.01452987243264,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Mt Spokane Ski and Snowboard Park",
+        "score": 34.94244021259733,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Snowmass",
+        "score": 34.40826031083628,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Deer Valley",
+        "score": 34.11318524356006,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Las Vegas Ski and Snowboard Resort",
+        "score": 33.80199074923993,
+        "region": "USA - Nevada"
+    },
+    {
+        "name": "Lost Trail - Powder Mountain",
+        "score": 33.50646792010137,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Monarch Ski Area",
+        "score": 33.21139285282515,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Pebble Creek Ski Area",
+        "score": 32.67631742733945,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Aspen",
+        "score": 32.06915234201842,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Lookout Pass",
+        "score": 31.702435376769216,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Heavenly",
+        "score": 30.649299476566377,
+        "region": "USA - California"
+    },
+    {
+        "name": "Bridger Bowl",
+        "score": 30.44914992410436,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Whitefish Mountain Resort",
+        "score": 30.337657220383907,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Arizona Snowbowl",
+        "score": 29.80347731862286,
+        "region": "USA - Arizona"
+    },
+    {
+        "name": "Donner Ski Ranch",
+        "score": 29.602880004298516,
+        "region": "USA - California"
+    },
+    {
+        "name": "Durango Mountain Resort",
+        "score": 28.956759636954683,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Taos",
+        "score": 28.845266933234225,
+        "region": "USA - New Mexico"
+    },
+    {
+        "name": "Ski Apache",
+        "score": 28.733774229513777,
+        "region": "USA - New Mexico"
+    },
+    {
+        "name": "Cooper Spur",
+        "score": 28.278848177385342,
+        "region": "USA - Oregon"
+    },
+    {
+        "name": "SolVista Golf and Ski Ranch (Silver Creek)",
+        "score": 28.22287794459395,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Big Sky",
+        "score": 26.69018908983446,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Wolf Creek Utah",
+        "score": 25.86003859707253,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Soldier Mountain",
+        "score": 25.436903637169607,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Mission Ridge",
+        "score": 24.902275973546224,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Sipapu Ski and Summer Resort",
+        "score": 24.646603950155153,
+        "region": "USA - New Mexico"
+    },
+    {
+        "name": "Sunlight Mountain Resort",
+        "score": 24.239588417296147,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Red Lodge Mountain",
+        "score": 24.095856859487846,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Red River",
+        "score": 24.05600605374038,
+        "region": "USA - New Mexico"
+    },
+    {
+        "name": "Magic Mountain (Vermont)",
+        "score": 23.944513350019925,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Mt Baldy (California)",
+        "score": 23.944513350019925,
+        "region": "USA - California"
+    },
+    {
+        "name": "Toggenburg Mountain",
+        "score": 23.704960753672765,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Snow Summit",
+        "score": 22.986750726493625,
+        "region": "USA - California"
+    },
+    {
+        "name": "Montana Snowbowl",
+        "score": 22.85913859572925,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Belleayre",
+        "score": 22.74719813014646,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Cataloochee",
+        "score": 22.508093295661634,
+        "region": "USA - North Carolina"
+    },
+    {
+        "name": "Silverton Mountain",
+        "score": 22.140928568550102,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "June Mountain",
+        "score": 21.84540573941155,
+        "region": "USA - California"
+    },
+    {
+        "name": "Sandia Peak",
+        "score": 21.183165945023802,
+        "region": "USA - New Mexico"
+    },
+    {
+        "name": "Hurricane Ridge",
+        "score": 20.89570282940721,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Stevens Pass",
+        "score": 20.89570282940721,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Discovery Ski Area",
+        "score": 20.75958322325854,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Buttermilk",
+        "score": 20.168985326843774,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Ski Brule",
+        "score": 20.11301509405238,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Sugar Mountain",
+        "score": 18.916147636041245,
+        "region": "USA - North Carolina"
+    },
+    {
+        "name": "Angel Fire Resort",
+        "score": 18.788535505276872,
+        "region": "USA - New Mexico"
+    },
+    {
+        "name": "Blacktail Mountain Ski Area",
+        "score": 18.253907841653493,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Appalachian Ski Mountain",
+        "score": 18.19748984699977,
+        "region": "USA - North Carolina"
+    },
+    {
+        "name": "Pajarito Mountain Ski Area",
+        "score": 17.774802648959177,
+        "region": "USA - New Mexico"
+    },
+    {
+        "name": "Gunstock",
+        "score": 17.2401749853358,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Ski Beech Mountain Resort",
+        "score": 17.2401749853358,
+        "region": "USA - North Carolina"
+    },
+    {
+        "name": "Mont Ripley",
+        "score": 17.23972722347347,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Camelback Ski Area",
+        "score": 17.239727223473466,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Lutsen Mountains",
+        "score": 17.239727223473466,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Snow Valley",
+        "score": 17.239727223473466,
+        "region": "USA - California"
+    },
+    {
+        "name": "Thunder Ridge",
+        "score": 17.239727223473466,
+        "region": "USA - New York"
+    },
+    {
+        "name": "White Pine",
+        "score": 16.928980491015658,
+        "region": "USA - Wyoming"
+    },
+    {
+        "name": "Hunter Mountain",
+        "score": 16.76151755450381,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Spirit Mountain",
+        "score": 16.76151755450381,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Showdown Ski Area",
+        "score": 15.380172209212253,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Giants Ridge Resort",
+        "score": 15.324201976420863,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Nubs Nob SA",
+        "score": 15.32420197642086,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "The Highlands",
+        "score": 15.32420197642086,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Wachusett Mountain Ski Area",
+        "score": 15.085097141936032,
+        "region": "USA - Massachusetts"
+    },
+    {
+        "name": "Summit at Snoqualmie",
+        "score": 14.925246157083816,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "The Summit at Snoqualmie",
+        "score": 14.925246157083816,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Boyne Mountain",
+        "score": 14.366887114756889,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Buck Hill",
+        "score": 14.366887114756889,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Crotched Mountain",
+        "score": 14.366887114756889,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Marquette Mountain",
+        "score": 14.366887114756889,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Bolton Valley Resort",
+        "score": 14.366439352894558,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Cannon Mountain",
+        "score": 14.366439352894558,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Granite Peak Ski Area",
+        "score": 14.366439352894558,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Loon Mountain",
+        "score": 14.366439352894558,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Mountain Creek Resort",
+        "score": 14.366439352894558,
+        "region": "USA - New Jersey"
+    },
+    {
+        "name": "Mountain High resort",
+        "score": 14.366439352894558,
+        "region": "USA - California"
+    },
+    {
+        "name": "Ski Plattekill",
+        "score": 14.366439352894558,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Sunday River",
+        "score": 14.127334518409729,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Jay Peak",
+        "score": 13.887781922062569,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Alpenglow",
+        "score": 13.432855869934135,
+        "region": "USA - Alaska"
+    },
+    {
+        "name": "Powder Ridge",
+        "score": 13.408676729368253,
+        "region": "USA - Connecticut"
+    },
+    {
+        "name": "Powder Ridge Ski Area",
+        "score": 13.408676729368253,
+        "region": "USA - Connecticut"
+    },
+    {
+        "name": "Sugarbush",
+        "score": 13.408676729368253,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Sugarloaf",
+        "score": 13.169571894883426,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Smuggler's Notch",
+        "score": 12.45091410584195,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Berkshire East",
+        "score": 11.972256675009962,
+        "region": "USA - Massachusetts"
+    },
+    {
+        "name": "Crystal Mountain Michigan",
+        "score": 11.972256675009962,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Great Divide",
+        "score": 11.972256675009962,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Okemo Mountain",
+        "score": 11.972256675009962,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Blue Mountain Resort",
+        "score": 11.493151482315644,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Bretton Woods",
+        "score": 11.493151482315644,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Caberfae Peaks",
+        "score": 11.493151482315644,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "McCauley Mountain Ski Center",
+        "score": 11.493151482315644,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Middlebury College Snow Bowl",
+        "score": 11.493151482315644,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Mount Sunapee",
+        "score": 11.493151482315644,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Saddleback",
+        "score": 11.493151482315644,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Ski Windham",
+        "score": 11.493151482315644,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Windham Mountain",
+        "score": 11.493151482315644,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Snowshoe Mountain Resort",
+        "score": 11.254046647830817,
+        "region": "USA - West Virginia"
+    },
+    {
+        "name": "Ski Sundown",
+        "score": 10.7749414551365,
+        "region": "USA - Connecticut"
+    },
+    {
+        "name": "Stowe",
+        "score": 10.7749414551365,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Whiteface Mountain (Lake Placid)",
+        "score": 10.7749414551365,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Bromley Mountain",
+        "score": 10.535836620651672,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "West Mountain",
+        "score": 10.535836620651672,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Big Horn Ski Resort",
+        "score": 10.447627533772438,
+        "region": "USA - Wyoming"
+    },
+    {
+        "name": "Little Ski Hill",
+        "score": 10.447627533772438,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Mt Shasta",
+        "score": 10.447627533772438,
+        "region": "USA - California"
+    },
+    {
+        "name": "Palisades Tahoe - Alpine Meadows",
+        "score": 10.447627533772438,
+        "region": "USA - California"
+    },
+    {
+        "name": "Royal Gorge",
+        "score": 10.447627533772438,
+        "region": "USA - California"
+    },
+    {
+        "name": "Soda Springs",
+        "score": 10.447627533772438,
+        "region": "USA - California"
+    },
+    {
+        "name": "Bristol Mountain",
+        "score": 10.056731427957356,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Cranmore Mountain Resort",
+        "score": 10.056731427957356,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Jackson Creek Summit",
+        "score": 10.056731427957356,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Pico Mountain at Killington",
+        "score": 10.056731427957356,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Song Mountain",
+        "score": 10.056731427957356,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Waterville Valley",
+        "score": 10.056731427957356,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Four Seasons",
+        "score": 10.056731427957354,
+        "region": "USA - West Virginia"
+    },
+    {
+        "name": "Swain",
+        "score": 10.056731427957354,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Timberline Four Seasons",
+        "score": 10.056731427957354,
+        "region": "USA - West Virginia"
+    },
+    {
+        "name": "Lost Valley",
+        "score": 9.817178831610194,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Burke Mountain",
+        "score": 9.578073997125367,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Bousquet Ski Area",
+        "score": 9.577626235263038,
+        "region": "USA - Massachusetts"
+    },
+    {
+        "name": "Gore Mountain",
+        "score": 9.577626235263038,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Jack Frost",
+        "score": 9.577626235263038,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Killington",
+        "score": 9.577626235263038,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Mohawk Mountain",
+        "score": 9.577626235263038,
+        "region": "USA - Connecticut"
+    },
+    {
+        "name": "Holiday Valley",
+        "score": 9.098968804431053,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Mount Snow",
+        "score": 9.098968804431049,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Antelope Butte",
+        "score": 8.955237246622756,
+        "region": "USA - Wyoming"
+    },
+    {
+        "name": "Bigrock Ski Area",
+        "score": 8.955237246622756,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Bluewood",
+        "score": 8.955237246622756,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Selkirk Powder",
+        "score": 8.955237246622756,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Stover Mountain Ski Area",
+        "score": 8.955237246622756,
+        "region": "USA - California"
+    },
+    {
+        "name": "Holimont Ski Area",
+        "score": 8.620311373599064,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Seven Springs Mt",
+        "score": 8.620311373599064,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Granite Gorge Ski Area",
+        "score": 8.619863611736733,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Pats Peak",
+        "score": 8.619863611736733,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Terry Peak",
+        "score": 8.14120618090475,
+        "region": "USA - South Dakota"
+    },
+    {
+        "name": "Attitash Mountain Resort",
+        "score": 8.141206180904748,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Bryce Resort",
+        "score": 8.141206180904748,
+        "region": "USA - Virginia"
+    },
+    {
+        "name": "Stratton Mountain",
+        "score": 8.141206180904748,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Wild Mountain Ski and Snowboard Area",
+        "score": 8.141206180904748,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Treetops",
+        "score": 7.662100988210431,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Jiminy Peak",
+        "score": 7.66210098821043,
+        "region": "USA - Massachusetts"
+    },
+    {
+        "name": "Massanutten",
+        "score": 7.66210098821043,
+        "region": "USA - Virginia"
+    },
+    {
+        "name": "Woods Valley Ski Area",
+        "score": 7.66210098821043,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Moonlight Basin",
+        "score": 7.462846959473074,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Spout Springs",
+        "score": 7.462846959473074,
+        "region": "USA - Oregon"
+    },
+    {
+        "name": "Tahoe Donner",
+        "score": 7.462846959473074,
+        "region": "USA - California"
+    },
+    {
+        "name": "Bear Creek Ski Area",
+        "score": 7.183443557378444,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Greek Peak",
+        "score": 7.183443557378444,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Pleasant Mountain",
+        "score": 7.183443557378444,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Ragged Mountain Resort",
+        "score": 7.183443557378444,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Snow Ridge",
+        "score": 7.183443557378444,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Trollhaugen",
+        "score": 7.183443557378444,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Afton Alps",
+        "score": 7.1829957955161134,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Magic Mountain (Idaho)",
+        "score": 6.704786126546458,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Otsego Resort",
+        "score": 6.464785768336968,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Mad River Glen",
+        "score": 6.22568093385214,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Eaglecrest Ski Area",
+        "score": 5.97000891046106,
+        "region": "USA - Alaska"
+    },
+    {
+        "name": "Elk Meadows",
+        "score": 5.97000891046106,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Howelsen Hill",
+        "score": 5.97000891046106,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Warner Canyon",
+        "score": 5.97000891046106,
+        "region": "USA - Oregon"
+    },
+    {
+        "name": "King Pine",
+        "score": 5.747023503020154,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Oak Mountain",
+        "score": 5.747023503020154,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Wildcat Mountain",
+        "score": 5.747023503020154,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Black Mountain of Maine",
+        "score": 5.746575741157822,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Holiday Mountain",
+        "score": 5.746575741157822,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Mt Abram Ski Resort",
+        "score": 5.746575741157822,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Royal Mountain",
+        "score": 5.746575741157822,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Sno Mountain",
+        "score": 5.746575741157822,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Ski Butternut",
+        "score": 5.267918310325836,
+        "region": "USA - Massachusetts"
+    },
+    {
+        "name": "Titus Mountain",
+        "score": 4.788813117631519,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Cuchara Mountain",
+        "score": 4.477618623311378,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Kendall Mountain",
+        "score": 4.477618623311378,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Nordic Valley",
+        "score": 4.477618623311378,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Snow King Resort",
+        "score": 4.477618623311378,
+        "region": "USA - Wyoming"
+    },
+    {
+        "name": "Peek'n Peak Resort",
+        "score": 4.310155686799532,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Shawnee Mountain Ski Area",
+        "score": 3.5914978977580567,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Catamount Ski and Ride Area",
+        "score": 3.352393063273229,
+        "region": "USA - Massachusetts"
+    },
+    {
+        "name": "Cottonwood Butte",
+        "score": 2.9852283361616956,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Loup Loup",
+        "score": 2.9852283361616956,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Maverick Mountain",
+        "score": 2.9852283361616956,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Purgatory",
+        "score": 2.9852283361616956,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Ski Rio",
+        "score": 2.9852283361616956,
+        "region": "USA - New Mexico"
+    },
+    {
+        "name": "Sleeping Giant",
+        "score": 2.9852283361616956,
+        "region": "USA - Wyoming"
+    },
+    {
+        "name": "The Canyons",
+        "score": 2.9852283361616956,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Coppervale",
+        "score": 1.4923902871496824,
+        "region": "USA - California"
+    },
+    {
+        "name": "Elk Ridge Ski and Outdoor Recreation",
+        "score": 1.4923902871496824,
+        "region": "USA - Arizona"
+    },
+    {
+        "name": "Enchanted Forest Cross Country Ski Area",
+        "score": 1.4923902871496824,
+        "region": "USA - New Mexico"
+    },
+    {
+        "name": "Granlibakken",
+        "score": 1.4923902871496824,
+        "region": "USA - California"
+    },
+    {
+        "name": "Hesperus",
+        "score": 1.4923902871496824,
+        "region": "USA - Colorado"
+    },
+    {
+        "name": "Homewood Mountain Resort",
+        "score": 1.4923902871496824,
+        "region": "USA - California"
+    },
+    {
+        "name": "Kelly Canyon Ski Area",
+        "score": 1.4923902871496824,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Marshall Mountain Ski Area",
+        "score": 1.4923902871496824,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Williams Ski Area",
+        "score": 1.4923902871496824,
+        "region": "USA - Arizona"
+    },
+    {
+        "name": "Yosemite-Badger Pass Ski Area",
+        "score": 1.4923902871496824,
+        "region": "USA - California"
+    },
+    {
+        "name": "Alpine Mountain",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Alpine Valley",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Alpine Valley Resort",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Alta Sierra at Shirley Meadows",
+        "score": 0.0,
+        "region": "USA - California"
+    },
+    {
+        "name": "Andes Tower Hills Ski Area",
+        "score": 0.0,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Apple Mountain",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Arctic Valley",
+        "score": 0.0,
+        "region": "USA - Alaska"
+    },
+    {
+        "name": "Arrowhead Ski Area",
+        "score": 0.0,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Ascutney Mountain Resort",
+        "score": 0.0,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Badger Mountain",
+        "score": 0.0,
+        "region": "USA - Washington"
+    },
+    {
+        "name": "Bald Mountain",
+        "score": 0.0,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Balsams Wilderness",
+        "score": 0.0,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Bear Mountain",
+        "score": 0.0,
+        "region": "USA - California"
+    },
+    {
+        "name": "Bear Paw Ski Bowl",
+        "score": 0.0,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Big Bear Mountain",
+        "score": 0.0,
+        "region": "USA - California"
+    },
+    {
+        "name": "Big Boulder",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Big Creek Ski Area",
+        "score": 0.0,
+        "region": "USA - Ohio"
+    },
+    {
+        "name": "Big Powderhorn Mountain",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Big Tupper Ski Area",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Bittersweet Ski Area",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Black Mountain",
+        "score": 0.0,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Black River Basin",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Blandford Ski Area",
+        "score": 0.0,
+        "region": "USA - Massachusetts"
+    },
+    {
+        "name": "Blue Hills",
+        "score": 0.0,
+        "region": "USA - Massachusetts"
+    },
+    {
+        "name": "Blue Knob",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Blue Marsh",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Boston Mills Brandywine",
+        "score": 0.0,
+        "region": "USA - Ohio"
+    },
+    {
+        "name": "Bottineau Winter Park",
+        "score": 0.0,
+        "region": "USA - North Dakota"
+    },
+    {
+        "name": "Boyce Park",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Bradford Ski Area",
+        "score": 0.0,
+        "region": "USA - Massachusetts"
+    },
+    {
+        "name": "Brandywine",
+        "score": 0.0,
+        "region": "USA - Ohio"
+    },
+    {
+        "name": "Brantling Ski Slopes",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Bruce Mound",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Buena Vista",
+        "score": 0.0,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Buffalo Ski Club",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Camden Snow Bowl",
+        "score": 0.0,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Camp 10 Ski n Snowboard",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Campgaw Mountain",
+        "score": 0.0,
+        "region": "USA - New Jersey"
+    },
+    {
+        "name": "Canaan Valley Resort",
+        "score": 0.0,
+        "region": "USA - West Virginia"
+    },
+    {
+        "name": "Cannonsburg",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Cascade Mountain",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Catamount Ski Area",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Chestnut Mountain",
+        "score": 0.0,
+        "region": "USA - Illinois"
+    },
+    {
+        "name": "Christie Mountain",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Christmas Mountain",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Clear Fork",
+        "score": 0.0,
+        "region": "USA - Ohio"
+    },
+    {
+        "name": "Cloudmont",
+        "score": 0.0,
+        "region": "USA - Alabama"
+    },
+    {
+        "name": "Cochran",
+        "score": 0.0,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Cockaigne Ski Area",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Coffee Mill",
+        "score": 0.0,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Dartmouth Skiway",
+        "score": 0.0,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Deer Mountain",
+        "score": 0.0,
+        "region": "USA - South Dakota"
+    },
+    {
+        "name": "Devils Head",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Dry Hill Ski Area",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Eagle Rock",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Eaton Mountain",
+        "score": 0.0,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Elk Mountain Ski Resort",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Elm Creek Winter Recreation Area",
+        "score": 0.0,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Ferguson Ridge",
+        "score": 0.0,
+        "region": "USA - Oregon"
+    },
+    {
+        "name": "Fernwood",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Four Lakes",
+        "score": 0.0,
+        "region": "USA - Illinois"
+    },
+    {
+        "name": "Fun Valley",
+        "score": 0.0,
+        "region": "USA - Iowa"
+    },
+    {
+        "name": "Gladstone Sport Park",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Grand Geneva",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Great Bear Ski Valley",
+        "score": 0.0,
+        "region": "USA - South Dakota"
+    },
+    {
+        "name": "Hanson Hills",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Hawksnest",
+        "score": 0.0,
+        "region": "USA - North Carolina"
+    },
+    {
+        "name": "Haystack",
+        "score": 0.0,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Hickory Hills",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Hickory Ski Center",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Hidden Valley",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Hidden Valley Club",
+        "score": 0.0,
+        "region": "USA - New Jersey"
+    },
+    {
+        "name": "Hidden Valley Ski",
+        "score": 0.0,
+        "region": "USA - Missouri"
+    },
+    {
+        "name": "High Point Cross Country Ski Center",
+        "score": 0.0,
+        "region": "USA - New Jersey"
+    },
+    {
+        "name": "Highlands of Olympia",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Hilltop Ski Area",
+        "score": 0.0,
+        "region": "USA - Alaska"
+    },
+    {
+        "name": "Huff Hills Ski Resort",
+        "score": 0.0,
+        "region": "USA - North Dakota"
+    },
+    {
+        "name": "Hyland Ski and Snowboard Area",
+        "score": 0.0,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Kissing Bridge",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Labrador Mountain",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Little Switzerland",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Lyndon Outing Club",
+        "score": 0.0,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Mad River Mountain",
+        "score": 0.0,
+        "region": "USA - Ohio"
+    },
+    {
+        "name": "Maple Ski Ridge",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Maple Valley",
+        "score": 0.0,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Mauna Kea",
+        "score": 0.0,
+        "region": "USA - Hawaii"
+    },
+    {
+        "name": "McIntyre Ski Area",
+        "score": 0.0,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Meadowlark Ski Lodge",
+        "score": 0.0,
+        "region": "USA - Wyoming"
+    },
+    {
+        "name": "Montage Mountain Resorts",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Mount Bohemia",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Mount Brighton",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Mount Crescent",
+        "score": 0.0,
+        "region": "USA - Iowa"
+    },
+    {
+        "name": "Mount Frontenac",
+        "score": 0.0,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Mount Jefferson",
+        "score": 0.0,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Mount Kato Ski Area",
+        "score": 0.0,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Mount La Crosse",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Mount Lemmon Ski Valley",
+        "score": 0.0,
+        "region": "USA - Arizona"
+    },
+    {
+        "name": "Mount Pleasant",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Mount Southington Ski Area",
+        "score": 0.0,
+        "region": "USA - Connecticut"
+    },
+    {
+        "name": "Mount Tone",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Mt Holly",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Mt Peter Ski Area",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Mt Zion",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Mt. Holiday Ski Area",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Mulligan's Hollow Ski Bowl",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Mystic Mountain at Nemacolin Woodlands",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Nashoba Valley",
+        "score": 0.0,
+        "region": "USA - Massachusetts"
+    },
+    {
+        "name": "New Hermon Mountain",
+        "score": 0.0,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Nordic Mountain",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Norway Mountain",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Ober Gatlinburg Ski Resort",
+        "score": 0.0,
+        "region": "USA - Tennessee"
+    },
+    {
+        "name": "Otis Ridge",
+        "score": 0.0,
+        "region": "USA - Massachusetts"
+    },
+    {
+        "name": "Paoli Peaks",
+        "score": 0.0,
+        "region": "USA - Indiana"
+    },
+    {
+        "name": "Perfect North Slope",
+        "score": 0.0,
+        "region": "USA - Indiana"
+    },
+    {
+        "name": "Pine Knob",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Pine Mountain",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Pines Peak",
+        "score": 0.0,
+        "region": "USA - Indiana"
+    },
+    {
+        "name": "Porcupine Mountain",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Powderhouse Hill",
+        "score": 0.0,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Raging Buffalo Snowboard Ski Park",
+        "score": 0.0,
+        "region": "USA - Illinois"
+    },
+    {
+        "name": "Riverside Hills",
+        "score": 0.0,
+        "region": "USA - Iowa"
+    },
+    {
+        "name": "Rocky Mountain",
+        "score": 0.0,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Sapphire Valley",
+        "score": 0.0,
+        "region": "USA - North Carolina"
+    },
+    {
+        "name": "Saskadena Six",
+        "score": 0.0,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Sawkill Family Ski Center",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Scaly Mountain",
+        "score": 0.0,
+        "region": "USA - North Carolina"
+    },
+    {
+        "name": "Seven Oaks",
+        "score": 0.0,
+        "region": "USA - Iowa"
+    },
+    {
+        "name": "Shanty Creek",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Ski Big Bear",
+        "score": 0.0,
+        "region": "USA - California"
+    },
+    {
+        "name": "Ski Denton",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Ski Liberty",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Ski Roundtop",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Ski Sawmill",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Ski Snowstar",
+        "score": 0.0,
+        "region": "USA - Illinois"
+    },
+    {
+        "name": "Ski Ward Ski Area",
+        "score": 0.0,
+        "region": "USA - Massachusetts"
+    },
+    {
+        "name": "Sky Valley",
+        "score": 0.0,
+        "region": "USA - Georgia-USA"
+    },
+    {
+        "name": "Skyline Ski Resort",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Snow Creek",
+        "score": 0.0,
+        "region": "USA - Missouri"
+    },
+    {
+        "name": "Snow Snake Mountain",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Snow Trails",
+        "score": 0.0,
+        "region": "USA - Ohio"
+    },
+    {
+        "name": "Snowhaven",
+        "score": 0.0,
+        "region": "USA - Idaho"
+    },
+    {
+        "name": "Split Rock",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Spring Mountain Ski Area",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Spruce Mountain Ski Slope",
+        "score": 0.0,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Sterling Forest Ski Center",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Storrs Hill",
+        "score": 0.0,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Sugarloaf Ski Lodge (Michigan)",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Sunburst",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Sundown Mountain",
+        "score": 0.0,
+        "region": "USA - Iowa"
+    },
+    {
+        "name": "Swiss Valley",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Sylvan Hill",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Tanglwood",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Telemark",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Tenney Mountain",
+        "score": 0.0,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Teton Pass Ski Area",
+        "score": 0.0,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "The Homestead (Michigan)",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "The Homestead Ski Area",
+        "score": 0.0,
+        "region": "USA - Virginia"
+    },
+    {
+        "name": "The Quechee Club",
+        "score": 0.0,
+        "region": "USA - Vermont"
+    },
+    {
+        "name": "Timber Ridge",
+        "score": 0.0,
+        "region": "USA - Michigan"
+    },
+    {
+        "name": "Titcomb Mountain",
+        "score": 0.0,
+        "region": "USA - Maine"
+    },
+    {
+        "name": "Turner Mountain",
+        "score": 0.0,
+        "region": "USA - Montana"
+    },
+    {
+        "name": "Tussey Mountain",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Tuxedo Ridge Ski Center",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Tyrol Basin",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Villa Olivia",
+        "score": 0.0,
+        "region": "USA - Illinois"
+    },
+    {
+        "name": "Welch Village",
+        "score": 0.0,
+        "region": "USA - Minnesota"
+    },
+    {
+        "name": "Whaleback Mountain",
+        "score": 0.0,
+        "region": "USA - New Hampshire"
+    },
+    {
+        "name": "Whitecap Mountain",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Whitetail Resort",
+        "score": 0.0,
+        "region": "USA - Pennsylvania"
+    },
+    {
+        "name": "Willard Mountain",
+        "score": 0.0,
+        "region": "USA - New York"
+    },
+    {
+        "name": "Wilmot Mountain",
+        "score": 0.0,
+        "region": "USA - Wisconsin"
+    },
+    {
+        "name": "Wintergreen Resort",
+        "score": 0.0,
+        "region": "USA - Virginia"
+    },
+    {
+        "name": "Winterplace Ski Resort",
+        "score": 0.0,
+        "region": "USA - West Virginia"
+    },
+    {
+        "name": "Wisp",
+        "score": 0.0,
+        "region": "USA - Maryland"
+    },
+    {
+        "name": "Wolf Laurel",
+        "score": 0.0,
+        "region": "USA - North Carolina"
+    },
+    {
+        "name": "Wolf Mountain",
+        "score": 0.0,
+        "region": "USA - Utah"
+    },
+    {
+        "name": "Wolf Ridge Ski Resort",
+        "score": 0.0,
+        "region": "USA - North Carolina"
+    },
+    {
+        "name": "Woodbury Ski Area",
+        "score": 0.0,
+        "region": "USA - Connecticut"
+    },
+    {
+        "name": "Yawgoo Valley",
+        "score": 0.0,
+        "region": "USA - Rhode Island"
+    }
+]
