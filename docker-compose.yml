@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  skiresortfinder:
+  usa-ski-resort-ranker:
     build: .
     ports:
       - "8081:5000"

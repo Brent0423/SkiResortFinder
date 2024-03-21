@@ -221,3 +221,84 @@ h2 {
 .resort-list .resort:hover {
     background-color: #87CEEB;
 }
+#search-resort h2, #all-resorts h2 {
+    margin-left: -25px; /* Adjust the value as needed */
+  }
+
+  /* Responsive Modal */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+}
+
+#map {
+    height: 600px;
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        width: 100%;
+        margin: 5% auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .modal-content {
+        width: 80%;
+        margin: 5% auto;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .modal-content {
+        width: 75%;
+        margin: 5% auto;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .modal-content {
+        width: 70%;
+        margin: 5% auto;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .modal-content {
+        width: 60%;
+        margin: 5% auto;
+    }
+}
+/* iPhone in portrait orientation */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+    body, html {
+        overflow-y: auto;
+    }
+
+    #map {
+        height: 400px; /* Adjust height for better display on smaller screens */
+    }
+
+    .modal-content {
+        width: 95%; /* Increase width for better visibility */
+        margin: 10% auto; /* Adjust margin for better centering */
+    }
+}

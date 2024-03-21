@@ -37,7 +37,7 @@ To set up Ski Resort Finder on your local machine:
 2. Navigate to the project directory: cd SkiResortFinder
 3. Build the Docker image: docker build -t skiresortfinder .
 4. Run the Docker container: docker-compose up
-5. Access the app at http://localhost:5000.
+5. Access the app at http://localhost:8081.
 
 ## How It Works
 
