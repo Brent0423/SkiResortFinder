@@ -10,7 +10,7 @@ from main import fetch_resort_data_sequentially, process_resort_data, sort_resor
 from save_data import save_resort_data  # Updated import statement
 
 # Create Flask app
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='.')
 
 # Home route
 @app.route('/')
