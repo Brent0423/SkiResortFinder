@@ -2,7 +2,7 @@
 import os
 import json
 import requests
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template_string, jsonify, request
 from resorts import resorts
 
 # Import functions from other files
@@ -15,11 +15,9 @@ app = Flask(__name__)
 # Home route
 @app.route('/')
 def home():
-    # Use the predefined list of resorts from the resorts module
-    resort_list = resorts
-
-    # Render the index.html template with the data and enumerate function
-    return render_template('index.html', data={}, enumerate=enumerate)
+    with open('index.html', 'r') as file:
+        html_content = file.read()
+    return render_template_string(html_content)
 
 # Resorts API route
 @app.route('/api/resorts')
