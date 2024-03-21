@@ -1,6 +1,6 @@
-# Ski Resort Finder
+# USA Ski Resort Ranker
 
-Welcome to Ski Resort Finder, your ultimate Flask-based web application for discovering and comparing ski resorts based on up-to-date snow conditions. This tool is perfect for planning your next ski trip or just exploring options for future snowy adventures.
+Welcome to USA Ski Resort Ranker, your ultimate Flask-based web application for discovering and comparing ski resorts based on up-to-date snow conditions. This tool is perfect for planning your next ski trip or just exploring options for future snowy adventures.
 
 ## Table of Contents
 
