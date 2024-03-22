@@ -2,6 +2,7 @@
 import os
 import json
 import requests
+import sys  # Updated import statement
 from flask import Flask, render_template_string, jsonify, request
 from resorts import resorts
 
@@ -120,6 +121,20 @@ def fetch_and_process_resort_data():
 
     return resort_data_list
 
+def fetch_and_process_resort_data_cli():
+    """
+    CLI wrapper for fetch_and_process_resort_data to be called from the command line.
+    """
+    print("Starting to fetch and process resort data...")
+    result = fetch_and_process_resort_data()
+    if result is not None:
+        print("Data fetched and processed successfully.")
+    else:
+        print("Failed to fetch and process data.")
+
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Use port provided by Heroku or default to 5000
-    app.run(host="0.0.0.0", port=port)
+    if len(sys.argv) > 1 and sys.argv[1] == 'fetch_data':
+        fetch_and_process_resort_data_cli()
+    else:
+        port = int(os.environ.get("PORT", 5000))  # Use port provided by Heroku or default to 5000
+        app.run(host="0.0.0.0", port=port)

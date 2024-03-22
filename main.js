@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var resortName = document.getElementById('resortSearchBox').value;
         if (resortName) {
             // Format resort name for URL
-            var formattedResortName = resortName.replace(/ /g, '%20');
+            var formattedResortName = encodeURIComponent(resortName);
             // Fetch resort data based on search input
             fetch(`/api/search?resort=${formattedResortName}`)
                 .then(response => response.json())
